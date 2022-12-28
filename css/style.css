@@ -513,9 +513,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro h1 {
   color: #fff;
-  font-family: "Raleway", sans-serif;
-  font-size: 56px;
-  font-weight: 600;
+  /* font-family: "Raleway", sans-serif; */
+  /* font-size: 56px; */
+  /* font-weight: 600; */
   text-transform: uppercase;
 }
 
@@ -1613,13 +1613,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     top: 70px;
   }
 
-  #intro h1 {
+  /* #intro h1 {
     font-size: 34px;
-  }
-
+  } */
+/* 
   #intro p {
     font-size: 16px;
-  }
+  } */
 
   #schedule .nav-tabs a {
     padding: 8px 60px;
