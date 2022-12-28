@@ -22,7 +22,7 @@ body {
 }
 .chrysalis-title:hover {
   transform: translate3d(0, -10px, 22px);
-  color: #ff0266 !important;
+  color: #007CC7!important;
 }
 
 
@@ -102,7 +102,7 @@ a {
 @-webkit-keyframes loading {
   to {
     text-shadow: 20px 0 70px #ff0266;
-    color: #ff0266;
+    color: #007CC7;
   }
 }
 .loader-text span:nth-child(2) {
