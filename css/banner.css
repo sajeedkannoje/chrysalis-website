@@ -43,7 +43,7 @@ body {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
-.chrysalis-title:hover, .chrysalis-title span:hover  {
+.chrysalis-title:hover {
   transform: translate3d(0, -10px, 22px);
   color: #007CC7!important;
   -webkit-user-select: none; /* Safari */
