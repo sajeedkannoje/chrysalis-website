@@ -37,12 +37,13 @@ $(function(){
     $('body').on('click', '.fullPreview .control', function(){
       var activa = $('.contenedorImgs .imagen.activa');
       var index;
+      // todo: need to fix this
       if($(this).hasClass('av')){
           index = activa.next().index();
         if(index < 0) index = 0;
       }else{
         index = activa.prev().index();
-        if(index < 0) index = $(".contenedorImgs").children().length + 1 ;
+        if(index < 0) index = $('.contenedorImgs').children().length - 1 ;
       }
       $('.fullPreview').addClass('anim');
       setTimeout(()=>{
