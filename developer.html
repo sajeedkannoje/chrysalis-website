@@ -24,708 +24,375 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  
   <style>
-    @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf) format('truetype');
+    * {
+  box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat';
+  color: #2b2c48;
+  font-family: "Jost", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1566738780863-f9608f88f3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
 }
-.fixed-content {
-  width: auto;
-  max-width: 860px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 40px;
-  text-align: center;
-}
-.header {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95581/header.png');
-  /*background-attachment: fixed;*/
-  color: #FFF;
-  max-height: 500px;
-  height: 100%;
-}
-.header .port {
-  border-radius: 50%;
-  border: 6px #ccc solid;
-  width: 16%;
-}
-.icon-row {
-  margin: 45px auto;
-  width: 100%;
-}
-.icon-row i {
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 44px;
-  margin: 0px 20px;
-  padding: 20px 30px;
-  transition: all 400ms ease-in-out;
-}
-.icon-row i:hover {
-  background: #FFF;
-  color: #ca5549;
-}
-.second {
-  background: #f2f2f2;
-  color: #a9b0ba;
-  width: 100%;
-}
-.footer {
-  color: #a9b0ba;
-}
-.footer .blue i {
-  color: #d2d6dc;
-}
-.footer .blue i:hover {
-  background: #3c7fc6;
-  color: #d2d6dc;
-}
-.footer .fa-chevron-up {
-  cursor: pointer;
-  font-size: 34px;
-  margin: 40px 0 0 0;
+
+.developer-card {
+  max-width: 340px;
+  margin: auto;
+  overflow: hidden;
+  /* overflow-y: auto; */
   position: relative;
-  top: 0px;
+  z-index: 1;
+  overflow-x: hidden;
+  background-color: white;
+  display: flex;
+  transition: 0.3s;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
 }
-.footer .fa-chevron-up:hover {
-  -webkit-animation: up 1s infinite;
-  /* Chrome, Safari, Opera */
-  animation: up 1s infinite;
+
+.developer-card[data-state="#developer-about"] {
+  height: 450px;
 }
-@-webkit-keyframes up {
+.developer-card[data-state="#developer-about"] .developer-card-main {
+  padding-top: 0;
+}
+
+.developer-card[data-state="#contact"] {
+  height: 430px;
+}
+
+.developer-card[data-state="#experience"] {
+  height: 550px;
+}
+
+.developer-card.is-active .developer-card-header {
+  height: 80px;
+}
+.developer-card.is-active .developer-card-cover {
+  height: 100px;
+  top: -50px;
+}
+.developer-card.is-active .developer-card-avatar {
+  transform: none;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+}
+.developer-card.is-active .developer-card-fullname,
+.developer-card.is-active .developer-card-jobtitle {
+  left: 86px;
+  transform: none;
+}
+.developer-card.is-active .developer-card-fullname {
+  bottom: 18px;
+  font-size: 19px;
+}
+.developer-card.is-active .developer-card-jobtitle {
+  bottom: 16px;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+.developer-card-header {
+  position: relative;
+  display: flex;
+  height: 200px;
+  flex-shrink: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+.developer-card-header * {
+  transition: 0.3s;
+}
+
+.developer-card-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  height: 160px;
+  top: -20%;
+  left: 0;
+  will-change: top;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px);
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.developer-card-avatar {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-64px);
+}
+
+.developer-card-fullname {
+  position: absolute;
+  bottom: 0;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-10px) translateX(-50%);
+  left: 50%;
+}
+
+.developer-card-jobtitle {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-7px);
+}
+
+.developer-card-main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+}
+
+.developer-card-subtitle {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.developer-card-content {
+  padding: 20px;
+}
+
+.developer-card-desc {
+  line-height: 1.6;
+  color: #636b6f;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+}
+
+.developer-card-social {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+.developer-card-social svg {
+  fill: #a5b5ce;
+  width: 16px;
+  display: block;
+  transition: 0.3s;
+}
+.developer-card-social a {
+  color: #8797a1;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  background-color: rgba(93, 133, 193, 0.05);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.developer-card-social a:hover svg {
+  fill: #637faa;
+}
+.developer-card-social a:last-child {
+  margin-right: 0;
+}
+
+.developer-card-buttons {
+  display: flex;
+  background-color: #fff;
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+.developer-card-buttons button {
+  flex: 1 1 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: 0;
+  font-size: 13px;
+  border: 0;
+  padding: 15px 5px;
+  cursor: pointer;
+  color: #5c5c6d;
+  transition: 0.3s;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  outline: 0;
+  border-bottom: 3px solid transparent;
+}
+.developer-card-buttons button.is-active, .developer-card-buttons button:hover {
+  color: #2b2c48;
+  border-bottom: 3px solid #8a84ff;
+  background: linear-gradient(to bottom, rgba(127, 199, 231, 0) 0%, rgba(207, 204, 255, 0.2) 44%, rgba(211, 226, 255, 0.4) 100%);
+}
+
+.developer-card-section {
+  display: none;
+}
+.developer-card-section.is-active {
+  display: block;
+  -webkit-animation: fadeIn 0.6s both;
+          animation: fadeIn 0.6s both;
+}
+
+@-webkit-keyframes fadeIn {
   0% {
-    top: 0px;
-  }
-  25% {
-    top: 5px;
-  }
-  50% {
-    top: 0px;
-  }
-  75% {
-    top: 5px;
+    opacity: 0;
+    transform: translatey(40px);
   }
   100% {
-    top: 0px;
+    opacity: 1;
   }
 }
 
-
-
-
-
-
-.align-center-center{
-  justify-content:center;
-  align-items:center;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translatey(40px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.flex{
-  display:flex;
+.developer-card-timeline {
+  margin-top: 30px;
+  position: relative;
 }
-.flex-row{
-  display:flex;
-  flex-direction:row;
-}
-.wrap{
-  flex-wrap:wrap;
-}
-html,body{
-    width: 100%;
-    height: 100%;
-    background-color:grey;
-}
-.container {
-    position: relative;
-    width:800px;
-    height:800px;
-    border:5px solid white;
-    margin: auto;
-}
-:root{
-    --primary-body-color:#35bcdd;
-    --secondary-body-color:#1b5b6b;
-    --mix-color:#40a0bc;
-}
-.help-container{
-  color:white;
-  display:absolute;
-}
-.owl-body-top{
-    position: absolute;
-    top: 10%;
-    left:32.5%;
-    width: 35%;
-    height:30%;
-    border-radius:50%;
-    background-color: var(--secondary-body-color);
-    background: radial-gradient(var(--secondary-body-color) 56%,black);
-    z-index: 2;
-}
-.owl-body-bottom{
-    position: absolute;
-    top: 30%;
-    left:30%;
-    width: 40%;
-    height:28%;
-    border-radius:50%;
-    background-color:var(--primary-body-color);
-    background:radial-gradient(var(--primary-body-color) 16%,var(--secondary-body-color));
-    z-index: 3;
-    animation: breathe 3s 0.5s infinite;
-}
-.owl-eye-outer-border{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    position:absolute;
-    width:200px;
-    height:200px;
-    background-color:var(--mix-color);
-    /*background: radial-gradient(var(--primary-body-color) 57%,var(--secondary-body-color));*/
-    border-radius:100px;
-}
-.eye-position-right{
-    top:14%;
-    right:27%;
-    z-index: 10;
-}
-.eye-position-left{
-    top:14%;
-    left:27%;
-    z-index: 10;
-}
-.eye-blank-area{
-    position: absolute;
-    width:170px;
-    height: 170px;
-    border-radius:85px;
-    background-color: white;
-    background:radial-gradient(white 50% ,var(--primary-body-color) 100%); 
-    margin:auto;
-    z-index: 20;
-    /*transform: rotate(0deg);*/
-    /*transition: transform 0.1s;*/
-}
-.eye-blank-pos-left{
-    top:16%;
-    left:28.85%;
-}
-.eye-blank-pos-right{
-    top:16%;
-    right:28.85%;
-}
-.pupil{
-   position: absolute;
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   background-color: black;
-   /*background: radial-gradient(#1f3c6b 47%,black);*/
-   margin: 35px;
-   /*left:-19%;*/
-   left: 0%;
-   transition: left 0.5s,transform- 0.1s;;
-
-   /*box-shadow: 15px 15px 0 0 black;*/
-}
-.pupil::before{
-   content: "";
-   position: absolute;
-   width:50px;
-   height: 50px;
-   border-radius: 50%;
-   background-color:#031430;
-   /*background:radial-gradient(#212946,black);*/
-   left:25%;
-   top:25%;
-   margin:auto;
-   /*top:0%;*/
-   /*right: -6%;*/
-}
-.pupil::after{
-   content: "";
-   position: absolute;
-   width:10px;
-   height: 10px;
-   border-radius: 50%;
-   background-color:white;
-   top:9%;
-   right: 29%;
-}
-.shine{
-    display: none;
-    position: absolute;
-    width:40px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: white;
-    top:0%;
-    right: 5%;
-}
-.wing-left{
-    position: absolute;
-    top:36%;
-    left:23%;
-    border-radius: 5px 300px 3px 300px;
-    background: linear-gradient(31deg,var(--secondary-body-color) 50%,#0e263a);
-    width: 164px;
-    height: 108px;
-    transform:rotate(64deg);
-    animation: left-wing-move 5s 0.5s infinite;
-    z-index: 8;
-}
-.wing-right{
-    position: absolute;
-    top:33%;
-    right:26%;
-    border-radius: 5px 300px 3px 300px;
-    background: linear-gradient(235deg,var(--secondary-body-color) 50%,#0e263a);
-    width: 108px;
-    height: 164px;
-    transform:rotate(382deg);
-    animation: right-wing-move 5s 0.5s infinite;
-    z-index: 8;
-}
-.peak{
-    position: absolute;
-    top:28%;
-    left:41.4%;
-    width: 0;
-    height: 0;
-    border-left:70px solid transparent;
-    border-right: 70px solid transparent;
-    border-top:80px solid #e6990c;
-    z-index: 15;
-}
-.feet-left{
-    position: absolute;
-    top:55%;
-    left:39%;
-    transform:rotate(7deg);
-    z-index: 25;
-}
-.feet-right{
-    position: absolute;
-    top:55%;
-    right:39%;
-    transform:rotate(-7deg);
-    z-index: 25;
-}
-.finger{
-    position: relative;
-    margin:1px;
-    width:20px;
-    height: 40px;
-    border-radius:10px;
-    background-color: orange;
-    background: linear-gradient(orange,#e47c11);
-}
-.body-feather {
-    position: relative;
-    /*padding:*/
-    margin:10px;
-    width: 0;
-    height: 0;
-    border-left:10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top:20px solid var(--secondary-body-color);
-}
-.feather-container{
-    position: relative;
-    top:10%;
-    margin: auto;
-    width: 150px
-}
-.ear{
-    position: absolute;
-    width: 96px;
-	height: 91px;
-    border-radius: 42%;
-    box-shadow: -20px 20px 0 0 var(--mix-color);   
-}
-.pos-ear-left::before{
-    content: '';
-    width: 20px;
-	height: 40px;
-    top:75%;
-    left:-19%;
-    border-radius:45%;
-    background-color:var(--mix-color); 
-    transform: rotate(-12deg);
-    position: absolute;
-}
-.pos-ear-right::before{
-    content: '';
-    width: 20px;
-	height: 40px;
-    top:87%;
-    left:-10%;
-    border-radius:45%;
-    background-color:var(--mix-color); 
-    /*background-color:black; */
-    transform: rotate(-78deg);
-    position: absolute;
-}
-.pos-ear-left{
-    transform:rotate(-12deg);
-    top:2.7%;
-    left: 31.5%;
-    animation: left-ear-move 4s 1s infinite;
-}
-.pos-ear-right{
-    transform:rotate(282deg);
-    top:2.7%;
-    right: 31.5%;
-    animation: right-ear-move 4s 1s infinite;
-}
-.eye-lid-up{
-    position: absolute;
-    width:170px;
-    height:85px;
-    margin:auto;
-    border-radius:170px 170px 0 0px;
-    background:linear-gradient(180deg,var(--primary-body-color) 0%,var(--primary-body-color) 100%,transparent 100%,transparent 100%); 
-    animation: lid-up-blink 2.5s infinite;
-    z-index:25;
-}
-.eye-lid-down{
-    position: absolute;
-    width:170px;
-    height:85px;
-    border-radius:0 0 170px 170px;
-    animation: lid-down-blink 2.5s infinite;
-    z-index: 25;
-}
-.mt85{
-    margin-top: 85px; 
-}
-@keyframes lid-up-blink{
-    0%,12.5%,100%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 0%,transparent 0%,transparent 100%); 
-    }
-    1.25%,11.25%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 20%,transparent 20%,transparent 100%); 
-    }
-    2.5%,10%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 40%,transparent 40%,transparent 100%); 
-    }
-    3.75%,8.75%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 60%,transparent 60%,transparent 100%); 
-    }
-    5%,7.5%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 80%,transparent 80%,transparent 100%); 
-    }
-    6.25%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 100%,transparent 100%,transparent 100%); 
-    }
+.developer-card-timeline:after {
+  background: linear-gradient(to top, rgba(134, 214, 243, 0) 0%, #516acc 100%);
+  content: "";
+  left: 42px;
+  width: 2px;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  content: "";
 }
 
-@keyframes lid-down-blink{
-    0%,12.5%,100%{
-     background:linear-gradient(180deg, transparent 0%, transparent 100%,var(--mix-color) 100%,var(--mix-color) 100%); 
-    }
-    1.25%,11.25%{
-     background:linear-gradient(180deg, transparent 0%, transparent 80%,var(--mix-color) 80%,var(--mix-color) 100%); 
-    }
-    2.5%,10%{
-     background:linear-gradient(180deg, transparent 0%, transparent 60%,var(--mix-color) 60%,var(--mix-color) 100%); 
-    }
-    3.75%,8.75%{
-     background:linear-gradient(180deg, transparent 0%, transparent 40%,var(--mix-color) 40%,var(--mix-color) 100%);  
-    }
-    5%,7.5%{
-     background:linear-gradient(180deg, transparent 0%, transparent 20%,var(--mix-color) 20%,var(--mix-color) 100%);  
-    }
-    6.25%{
-     background:linear-gradient(180deg, transparent 0%, transparent 0%,var(--mix-color) 0%,var(--mix-color) 100%);   
-    }
+.developer-card-item {
+  position: relative;
+  padding-left: 60px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  z-index: 1;
 }
-@keyframes lid-up-sleep{
-    0%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 0%,transparent 0%,transparent 100%); 
-    }
-    2%{
-     background:linear-gradient(180deg,var(--mix-color) 10%,var(--mix-color) 10%,transparent 10%,transparent 100%); 
-    }
-    4%{
-     background:linear-gradient(180deg,var(--mix-color) 20%,var(--mix-color) 20%,transparent 20%,transparent 100%); 
-    }
-    6%{
-     background:linear-gradient(180deg,var(--mix-color) 30%,var(--mix-color) 30%,transparent 30%,transparent 100%); 
-    }
-    8%{
-     background:linear-gradient(180deg,var(--mix-color) 40%,var(--mix-color) 40%,transparent 40%,transparent 100%); 
-    }
-    10%,30%,60%,85%{
-     background:linear-gradient(180deg,var(--mix-color) 50%,var(--mix-color) 50%,transparent 50%,transparent 100%); 
-    }
-    34%,58%,62%,82%,88%{
-     background:linear-gradient(180deg,var(--mix-color) 60%,var(--mix-color) 60%,transparent 60%,transparent 100%); 
-    }
-    38%,56%,64%,79%,91%{
-     background:linear-gradient(180deg,var(--mix-color) 70%,var(--mix-color) 70%,transparent 70%,transparent 100%); 
-    }
-    42%,54%,66%,76%,94%{
-     background:linear-gradient(180deg,var(--mix-color) 80%,var(--mix-color) 80%,transparent 80%,transparent 100%); 
-    }
-    46%,52%,68%,73%,97%{
-     background:linear-gradient(180deg,var(--mix-color) 90%,var(--mix-color) 90%,transparent 90%,transparent 100%); 
-    }
-    50%,70%,100%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 99%,var(--secondary-body-color) 100%); 
-    }
+.developer-card-item:last-child {
+  padding-bottom: 5px;
 }
-@keyframes lid-down-sleep{
-    0%{
-     background:linear-gradient(180deg, transparent 0%, transparent 100%,var(--mix-color) 100%,var(--mix-color) 100%); 
-    }
-    2%{
-     background:linear-gradient(180deg, transparent 0%, transparent 90%,var(--mix-color) 90%,var(--mix-color) 100%); 
-    }
-    4%{
-     background:linear-gradient(180deg, transparent 0%, transparent 80%,var(--mix-color) 80%,var(--mix-color) 100%); 
-    }
-    6%{
-     background:linear-gradient(180deg, transparent 0%, transparent 70%,var(--mix-color) 70%,var(--mix-color) 100%); 
-    }
-    8%{
-     background:linear-gradient(180deg, transparent 0%, transparent 60%,var(--mix-color) 60%,var(--mix-color) 100%); 
-    }
-    10%,30%,60%,85%{
-     background:linear-gradient(180deg, transparent 0%, transparent 50%,var(--mix-color) 50%,var(--mix-color) 100%); 
-    }
-    34%,58%,62%,82%,88%{
-     background:linear-gradient(180deg, transparent 0%, transparent 40%,var(--mix-color) 40%,var(--mix-color) 100%); 
-    }
-    38%,56%,64%,79%,91%{
-     background:linear-gradient(180deg, transparent 0%, transparent 30%,var(--mix-color) 30%,var(--mix-color) 100%); 
-    }
-    42%,54%,66%,76%,94%{
-     background:linear-gradient(180deg, transparent 0%, transparent 20%,var(--mix-color) 20%,var(--mix-color) 100%); 
-    }
-    46%,52%,68%,73%,97%{
-     background:linear-gradient(180deg, transparent 0%, transparent 10%,var(--mix-color) 10%,var(--mix-color) 100%); 
-    }
-    50%,70%,100%{
-     background:linear-gradient(180deg, var(--secondary-body-color) 0%,var(--mix-color) 1%,var(--mix-color) 100%);   
-    }
-}
-@keyframes lid-up-angry{
-    0%{
-     background:linear-gradient(180deg,var(--mix-color) 0%,var(--mix-color) 0%,transparent 0%,transparent 100%); 
-    }
-    10%{
-     background:linear-gradient(180deg,var(--mix-color) 5%,var(--mix-color) 5%,transparent 0%,transparent 100%); 
-    }
-    20%{
-     background:linear-gradient(180deg,var(--mix-color) 10%,var(--mix-color) 10%,transparent 10%,transparent 100%); 
-    }
-    30%{
-     background:linear-gradient(180deg,var(--mix-color) 15%,var(--mix-color) 15%,transparent 10%,transparent 100%); 
-    }
-    40%{
-     background:linear-gradient(180deg,var(--mix-color) 20%,var(--mix-color) 20%,transparent 20%,transparent 100%); 
-    }
-    50%{
-     background:linear-gradient(180deg,var(--mix-color) 25%,var(--mix-color) 25%,transparent 20%,transparent 100%); 
-    }
-    60%{
-     background:linear-gradient(180deg,var(--mix-color) 30%,var(--mix-color) 30%,transparent 30%,transparent 100%); 
-    }
-    70%{
-     background:linear-gradient(180deg,var(--mix-color) 35%,var(--mix-color) 35%,transparent 30%,transparent 100%); 
-    }
-    80%{
-     background:linear-gradient(180deg,var(--mix-color) 40%,var(--mix-color) 40%,transparent 40%,transparent 100%); 
-    }
-    90%{
-     background:linear-gradient(180deg,var(--mix-color) 45%,var(--mix-color) 45%,transparent 40%,transparent 100%); 
-    }
-    100%{
-     background:linear-gradient(180deg,var(--mix-color) 50%,var(--mix-color) 50%,transparent 50%,transparent 100%); 
-    }
-}
-@keyframes lid-down-angry{
-    0%{
-     background:linear-gradient(180deg, transparent 0%, transparent 100%,var(--mix-color) 100%,var(--mix-color) 100%); 
-    }
-    10%{
-     background:linear-gradient(180deg, transparent 0%, transparent 95%,var(--mix-color) 95%,var(--mix-color) 100%); 
-    }
-    20%{
-     background:linear-gradient(180deg, transparent 0%, transparent 90%,var(--mix-color) 90%,var(--mix-color) 100%); 
-    }
-    30%{
-     background:linear-gradient(180deg, transparent 0%, transparent 85%,var(--mix-color) 85%,var(--mix-color) 100%); 
-    }
-    40%{
-     background:linear-gradient(180deg, transparent 0%, transparent 80%,var(--mix-color) 80%,var(--mix-color) 100%); 
-    }
-    50%{
-     background:linear-gradient(180deg, transparent 0%, transparent 75%,var(--mix-color) 75%,var(--mix-color) 100%); 
-    }
-    60%{
-     background:linear-gradient(180deg, transparent 0%, transparent 70%,var(--mix-color) 70%,var(--mix-color) 100%); 
-    }
-    70%{
-     background:linear-gradient(180deg, transparent 0%, transparent 65%,var(--mix-color) 65%,var(--mix-color) 100%); 
-    }
-    80%{
-     background:linear-gradient(180deg, transparent 0%, transparent 60%,var(--mix-color) 60%,var(--mix-color) 100%); 
-    }
-    90%{
-     background:linear-gradient(180deg, transparent 0%, transparent 55%,var(--mix-color) 55%,var(--mix-color) 100%); 
-    }
-    100%{
-     background:linear-gradient(180deg, transparent 0%, transparent 50%,var(--mix-color) 50%,var(--mix-color) 100%); 
-    }
-}
-@keyframes left-wing-move{
-    0%,10%,20%,100%{
-        transform:rotate(64deg);
-        left:23%;
-    }
-    5%,15%{
-        transform: rotate(100deg);
-        left:18%;
-    }
-}
-@keyframes left-wing-sleep{
-    0%,100%{
-        transform:rotate(64deg);
-        left:23%;
-    }
-    50%{
-        transform: rotate(100deg);
-        left:18%;
-    }
-}
-@keyframes right-wing-move{
-    0%,10%,20%,100%{
-        transform:rotate(382deg);
-        right:26%;
-    }
-    5%,15%{
-        transform: rotate(346deg);
-        right:23%;
-    }
-}
-@keyframes right-wing-sleep{
-    0%,100%{
-        transform:rotate(382deg);
-        right:26%;
-    }
-    50%{
-        transform: rotate(346deg);
-        right:23%;
-    }
+.developer-card-item:after {
+  content: attr(data-year);
+  width: 10px;
+  position: absolute;
+  top: 0;
+  left: 37px;
+  width: 8px;
+  height: 8px;
+  line-height: 0.6;
+  border: 2px solid #fff;
+  font-size: 11px;
+  text-indent: -35px;
+  border-radius: 50%;
+  color: rgba(134, 134, 134, 0.7);
+  background: linear-gradient(to bottom, #a0aee3 0%, #516acc 100%);
 }
 
-@keyframes left-ear-move{
-    0%,25%,100%{
-        /*left: 31.5%;*/
-        transform:rotate(-12deg);
-    }
-    6%{
-        /*left: 30.5%;*/
-        transform: rotate(-18deg);
-    }
-    12%{
-        /*left: 31.5%;*/
-        transform: rotate(-24deg);
-    }
-    18%{
-        /*left: 32.5%;*/
-        transform: rotate(-18deg);
-    }
+.developer-card-item-title {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
-@keyframes right-ear-move{
-    0%,25%,100%{
-        /*right: 31.5%;*/
-        transform:rotate(282deg);
-    }
-    6%{
-        /*right: 30.5%;*/
-        transform: rotate(288deg);
-    }
-    12%{
-        /*right: 31.5%;*/
-        transform: rotate(294deg);
-    }
-    18%{
-        /*right: 32.5%;*/
-        transform: rotate(288deg);
-    }
+
+.developer-card-item-desc {
+  font-size: 13px;
+  color: #6f6f7b;
+  line-height: 1.5;
+  font-family: "DM Sans", sans-serif;
 }
-@keyframes breathe{
-        0%{
-            transform:scale(1);
-        }
-        50%{
-            transform: scale(1.05);
-        }
-        100%{
-            transform: scale(1);
-        }
+
+.developer-card-contact-wrapper {
+  margin-top: 20px;
 }
+
+.developer-card-contact {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #6f6f7b;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+  cursor: pointer;
+}
+.developer-card-contact + .developer-card-contact {
+  margin-top: 16px;
+}
+.developer-card-contact svg {
+  flex-shrink: 0;
+  width: 30px;
+  min-height: 34px;
+  margin-right: 12px;
+  transition: 0.3s;
+  padding-right: 12px;
+  border-right: 1px solid #dfe2ec;
+}
+
+.contact-me {
+  border: 0;
+  outline: none;
+  background: linear-gradient(to right, rgba(83, 200, 239, 0.8) 0%, rgba(81, 106, 204, 0.8) 96%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  transition: 0.3s;
+}
+
   </style>
 </head>
 
 <body>
-    <div class="container" onmousemove="mouseMove(event,this)" onmouseleave="mouseOut(event,this)">
-        <div class="owl-body-top"></div>
-        <div class="owl-body-bottom flex-row align-center-center wrap" onclick="angryStart(event)">
-            <div class="feather-container flex-row align-center-center wrap">
-                <div class="body-feather"></div>
-                <div class="body-feather"></div>
-                <div class="body-feather"></div>
-                <div class="body-feather"></div>
-                <div class="body-feather"></div>
-            </div>
-        </div>
-        <div class="owl-eye-outer-border eye-position-left" onclick="angryStart(event)"></div>
-        <div id="eyeLeft" class="eye-blank-area eye-blank-pos-left" onclick="angryStart(event)">
-            <div id="pupilLeft" class="pupil">
-                <div class="shine"></div>
-            </div>
-        </div>
-        <div class="eye-lid-up eye-blank-pos-left" onclick="angryStart(event)"></div>
-        <div class="eye-lid-down eye-blank-pos-left mt85" onclick="angryStart(event)"></div>
-
-        <div class="owl-eye-outer-border eye-position-right" onclick="angryStart(event)"></div>
-        <div id="eyeRight" class="eye-blank-area eye-blank-pos-right" onclick="angryStart(event)">
-            <div id="pupilRight" class="pupil">
-                <div class="shine"></div>
-            </div>
-        </div>
-        <div class="eye-lid-up eye-blank-pos-right" onclick="angryStart(event)"></div>
-        <div class="eye-lid-down eye-blank-pos-right mt85" onclick="angryStart(event)"></div>
-        <div class="wing-left" onclick="angryStart(event)"></div>
-        <div class="wing-right" onclick="angryStart(event)"></div>
-        <div class="peak" onclick="angryStart(event)"></div>
-        <div class="feet-left flex-row align-center-center">
-            <div class="finger"></div>
-            <div class="finger"></div>
-            <div class="finger"></div>
-        </div>
-        <div class="feet-right flex-row align-center-center">
-            <div class="finger"></div>
-            <div class="finger"></div>
-            <div class="finger"></div>
-        </div>
-        <div class="ear pos-ear-left"></div>
-        <div class="ear pos-ear-right"></div>
-    </div>
+    
   <!--==========================
     Header
   ============================-->
@@ -741,7 +408,7 @@ html,body{
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li ><a href="/">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#developer-about">About</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li class="menu-active"><a href="gallery.html">Gallery</a></li>
           <li><a href="src.html">SRC</a></li> 
@@ -761,127 +428,481 @@ html,body{
     </div>
   </header><!-- #header -->
   
-  <main id="main">
-    
-    <div class="header">
-        <div class="fixed-content">
-            <img class="port" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95581/cat.jpg">
-            <h2>DEVELOPER TEAM</h2>
-            <div class="container" onmousemove="mouseMove(event,this)" onmouseleave="mouseOut(event,this)">
-                <div class="owl-body-top"></div>
-                <div class="owl-body-bottom flex-row align-center-center wrap" onclick="angryStart(event)">
-                    <div class="feather-container flex-row align-center-center wrap">
-                        <div class="body-feather"></div>
-                        <div class="body-feather"></div>
-                        <div class="body-feather"></div>
-                        <div class="body-feather"></div>
-                        <div class="body-feather"></div>
-                    </div>
-                </div>
-                <div class="owl-eye-outer-border eye-position-left" onclick="angryStart(event)"></div>
-                <div id="eyeLeft" class="eye-blank-area eye-blank-pos-left" onclick="angryStart(event)">
-                    <div id="pupilLeft" class="pupil">
-                        <div class="shine"></div>
-                    </div>
-                </div>
-                <div class="eye-lid-up eye-blank-pos-left" onclick="angryStart(event)"></div>
-                <div class="eye-lid-down eye-blank-pos-left mt85" onclick="angryStart(event)"></div>
-        
-                <div class="owl-eye-outer-border eye-position-right" onclick="angryStart(event)"></div>
-                <div id="eyeRight" class="eye-blank-area eye-blank-pos-right" onclick="angryStart(event)">
-                    <div id="pupilRight" class="pupil">
-                        <div class="shine"></div>
-                    </div>
-                </div>
-                <div class="eye-lid-up eye-blank-pos-right" onclick="angryStart(event)"></div>
-                <div class="eye-lid-down eye-blank-pos-right mt85" onclick="angryStart(event)"></div>
-                <div class="wing-left" onclick="angryStart(event)"></div>
-                <div class="wing-right" onclick="angryStart(event)"></div>
-                <div class="peak" onclick="angryStart(event)"></div>
-                <div class="feet-left flex-row align-center-center">
-                    <div class="finger"></div>
-                    <div class="finger"></div>
-                    <div class="finger"></div>
-                </div>
-                <div class="feet-right flex-row align-center-center">
-                    <div class="finger"></div>
-                    <div class="finger"></div>
-                    <div class="finger"></div>
-                </div>
-                <div class="ear pos-ear-left"></div>
-                <div class="ear pos-ear-right"></div>
-            </div>
-        </div>
-    </div>
+  <!-- developer section -->
+  <div class="container-fluid  ">
+
+
+    <div class="row m-5">
+
+    <div class="col m-5 ">
+
+   
  
-    </main>
-
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <img src="img/logo.png" alt="TheEvenet">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              Katol Rd, Lonand, Gittikhadan <br>
-              Nagpur, 440013<br>
-              Maharashtra <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
-
-          </div>
-
+  <div class="developer-card" data-state="#developer-about">
+    <div class="developer-card-header">
+      <div class="developer-card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+      <img class="developer-card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+      <h1 class="developer-card-fullname">Sajeed Kannoje</h1>
+      <h2 class="developer-card-jobtitle">Full-Stack Web Developer</h2>
+    </div>
+    <div class="developer-card-main">
+      <div class="developer-card-section is-active" id="dewveloper-about">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">ABOUT</div>
+          <p class="developer-card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
+          </p>
+        </div>
+        <div class="developer-card-social">
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+          <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+              <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+              <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
         </div>
       </div>
+      <div class="developer-card-section" id="experience">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">WORK EXPERIENCE</div>
+          <div class="developer-card-timeline">
+            <div class="developer-card-item" data-year="2014">
+              <div class="developer-card-item-title">Front-end Developer at <span>JotForm</span></div>
+              <div class="developer-card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+            </div>
+            <div class="developer-card-item" data-year="2016">
+              <div class="developer-card-item-title">UI Developer at <span>GitHub</span></div>
+              <div class="developer-card-item-desc">Developed new conversion funnels and disrupt.</div>
+            </div>
+            <div class="developer-card-item" data-year="2018">
+              <div class="developer-card-item-title">Illustrator at <span>Google</span></div>
+              <div class="developer-card-item-desc">Onboarding illustrations for App.</div>
+            </div>
+            <div class="developer-card-item" data-year="2020">
+              <div class="developer-card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+              <div class="developer-card-item-desc">Responsible for the encomposing brand expreience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-section" id="contact">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">CONTACT</div>
+          <div class="developer-card-contact-wrapper">
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" /></svg>
+              Algonquin Rd, Three Oaks Vintage, MI, 49128
+            </div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" /></svg>
+              william@rocheald.com
+            </div>
+            <button class="contact-me">WORK TOGETHER</button>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-buttons">
+        <button data-section="#developer-about" class="is-active">ABOUT</button>
+        <button data-section="#experience">EXPERIENCE</button>
+        <button data-section="#contact">CONTACT</button>
+      </div>
     </div>
+  </div>
+  </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+
+
+<div class="col m-5">
+
+
+  <div class="developer-card" data-state="#developer-about">
+    <div class="developer-card-header">
+      <div class="developer-card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+      <img class="developer-card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+      <h1 class="developer-card-fullname">Tanmay Warokar</h1>
+      <h2 class="developer-card-jobtitle">Graphic Designer</h2>
+    </div>
+    <div class="developer-card-main">
+      <div class="developer-card-section is-active" id="dewveloper-about">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">ABOUT</div>
+          <p class="developer-card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
+          </p>
+        </div>
+        <div class="developer-card-social">
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+          <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+              <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+              <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+        </div>
       </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      <div class="developer-card-section" id="experience">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">WORK EXPERIENCE</div>
+          <div class="developer-card-timeline">
+            <div class="developer-card-item" data-year="2014">
+              <div class="developer-card-item-title">Front-end Developer at <span>JotForm</span></div>
+              <div class="developer-card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+            </div>
+            <div class="developer-card-item" data-year="2016">
+              <div class="developer-card-item-title">UI Developer at <span>GitHub</span></div>
+              <div class="developer-card-item-desc">Developed new conversion funnels and disrupt.</div>
+            </div>
+            <div class="developer-card-item" data-year="2018">
+              <div class="developer-card-item-title">Illustrator at <span>Google</span></div>
+              <div class="developer-card-item-desc">Onboarding illustrations for App.</div>
+            </div>
+            <div class="developer-card-item" data-year="2020">
+              <div class="developer-card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+              <div class="developer-card-item-desc">Responsible for the encomposing brand expreience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-section" id="contact">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">CONTACT</div>
+          <div class="developer-card-contact-wrapper">
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" /></svg>
+              Algonquin Rd, Three Oaks Vintage, MI, 49128
+            </div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" /></svg>
+              william@rocheald.com
+            </div>
+            <button class="contact-me">WORK TOGETHER</button>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-buttons">
+        <button data-section="#developer-about" class="is-active">ABOUT</button>
+        <button data-section="#experience">EXPERIENCE</button>
+        <button data-section="#contact">CONTACT</button>
       </div>
     </div>
-  </footer><!-- #footer -->
+  </div>
+</div>
+  
+
+
+  <div class="col m-5">
+
+      
+  <div class="developer-card" data-state="#developer-about">
+    <div class="developer-card-header">
+      <div class="developer-card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+      <img class="developer-card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+      <h1 class="developer-card-fullname">Ayush Pal</h1>
+      <h2 class="developer-card-jobtitle">Front-End Developer</h2>
+    </div>
+    <div class="developer-card-main">
+      <div class="developer-card-section is-active" id="dewveloper-about">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">ABOUT</div>
+          <p class="developer-card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
+          </p>
+        </div>
+        <div class="developer-card-social">
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+          <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+              <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+              <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+        </div>
+      </div>
+      <div class="developer-card-section" id="experience">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">WORK EXPERIENCE</div>
+          <div class="developer-card-timeline">
+            <div class="developer-card-item" data-year="2014">
+              <div class="developer-card-item-title">Front-end Developer at <span>JotForm</span></div>
+              <div class="developer-card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+            </div>
+            <div class="developer-card-item" data-year="2016">
+              <div class="developer-card-item-title">UI Developer at <span>GitHub</span></div>
+              <div class="developer-card-item-desc">Developed new conversion funnels and disrupt.</div>
+            </div>
+            <div class="developer-card-item" data-year="2018">
+              <div class="developer-card-item-title">Illustrator at <span>Google</span></div>
+              <div class="developer-card-item-desc">Onboarding illustrations for App.</div>
+            </div>
+            <div class="developer-card-item" data-year="2020">
+              <div class="developer-card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+              <div class="developer-card-item-desc">Responsible for the encomposing brand expreience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-section" id="contact">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">CONTACT</div>
+          <div class="developer-card-contact-wrapper">
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" /></svg>
+              Algonquin Rd, Three Oaks Vintage, MI, 49128
+            </div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" /></svg>
+              william@rocheald.com
+            </div>
+            <button class="contact-me">WORK TOGETHER</button>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-buttons">
+        <button data-section="#developer-about" class="is-active">ABOUT</button>
+        <button data-section="#experience">EXPERIENCE</button>
+        <button data-section="#contact">CONTACT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+<div class="row m-5">
+
+
+<div class="col m-5">
+
+  <div class="developer-card" data-state="#developer-about">
+    <div class="developer-card-header">
+      <div class="developer-card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+      <img class="developer-card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+      <h1 class="developer-card-fullname">Shivam Asati</h1>
+      <h2 class="developer-card-jobtitle">Front-End Developer</h2>
+    </div>
+    <div class="developer-card-main">
+      <div class="developer-card-section is-active" id="dewveloper-about">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">ABOUT</div>
+          <p class="developer-card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
+          </p>
+        </div>
+        <div class="developer-card-social">
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+          <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+              <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+              <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+        </div>
+      </div>
+      <div class="developer-card-section" id="experience">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">WORK EXPERIENCE</div>
+          <div class="developer-card-timeline">
+            <div class="developer-card-item" data-year="2014">
+              <div class="developer-card-item-title">Front-end Developer at <span>JotForm</span></div>
+              <div class="developer-card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+            </div>
+            <div class="developer-card-item" data-year="2016">
+              <div class="developer-card-item-title">UI Developer at <span>GitHub</span></div>
+              <div class="developer-card-item-desc">Developed new conversion funnels and disrupt.</div>
+            </div>
+            <div class="developer-card-item" data-year="2018">
+              <div class="developer-card-item-title">Illustrator at <span>Google</span></div>
+              <div class="developer-card-item-desc">Onboarding illustrations for App.</div>
+            </div>
+            <div class="developer-card-item" data-year="2020">
+              <div class="developer-card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+              <div class="developer-card-item-desc">Responsible for the encomposing brand expreience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-section" id="contact">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">CONTACT</div>
+          <div class="developer-card-contact-wrapper">
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" /></svg>
+              Algonquin Rd, Three Oaks Vintage, MI, 49128
+            </div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" /></svg>
+              william@rocheald.com
+            </div>
+            <button class="contact-me">WORK TOGETHER</button>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-buttons">
+        <button data-section="#developer-about" class="is-active">ABOUT</button>
+        <button data-section="#experience">EXPERIENCE</button>
+        <button data-section="#contact">CONTACT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col m-5">
+
+
+  <div class="developer-card" data-state="#developer-about">
+    <div class="developer-card-header">
+      <div class="developer-card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+      <img class="developer-card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+      <h1 class="developer-card-fullname">Om Bhagwani</h1>
+      <h2 class="developer-card-jobtitle">Front-End Developer</h2>
+    </div>
+    <div class="developer-card-main">
+      <div class="developer-card-section is-active" id="dewveloper-about">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">ABOUT</div>
+          <p class="developer-card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
+          </p>
+        </div>
+        <div class="developer-card-social">
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+          <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+              <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+              <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+        </div>
+      </div>
+      <div class="developer-card-section" id="experience">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">WORK EXPERIENCE</div>
+          <div class="developer-card-timeline">
+            <div class="developer-card-item" data-year="2014">
+              <div class="developer-card-item-title">Front-end Developer at <span>JotForm</span></div>
+              <div class="developer-card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+            </div>
+            <div class="developer-card-item" data-year="2016">
+              <div class="developer-card-item-title">UI Developer at <span>GitHub</span></div>
+              <div class="developer-card-item-desc">Developed new conversion funnels and disrupt.</div>
+            </div>
+            <div class="developer-card-item" data-year="2018">
+              <div class="developer-card-item-title">Illustrator at <span>Google</span></div>
+              <div class="developer-card-item-desc">Onboarding illustrations for App.</div>
+            </div>
+            <div class="developer-card-item" data-year="2020">
+              <div class="developer-card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+              <div class="developer-card-item-desc">Responsible for the encomposing brand expreience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-section" id="contact">
+        <div class="developer-card-content">
+          <div class="developer-card-subtitle">CONTACT</div>
+          <div class="developer-card-contact-wrapper">
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" /></svg>
+              Algonquin Rd, Three Oaks Vintage, MI, 49128
+            </div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+            <div class="developer-card-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <path d="M22 6l-10 7L2 6" /></svg>
+              william@rocheald.com
+            </div>
+            <button class="contact-me">WORK TOGETHER</button>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card-buttons">
+        <button data-section="#developer-about" class="is-active">ABOUT</button>
+        <button data-section="#experience">EXPERIENCE</button>
+        <button data-section="#contact">CONTACT</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>  
+
+</div>
+
+
+  
 
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <script>
+    const buttons = document.querySelectorAll(".developer-card-buttons button");
+const sections = document.querySelectorAll(".developer-card-section");
+const card = document.querySelector(".developer-card");
 
+const handleButtonClick = e => {
+const targetSection = e.target.getAttribute("data-section");
+const section = document.querySelector(targetSection);
+targetSection !== "#developer-about" ?
+card.classList.add("is-active") :
+card.classList.remove("is-active");
+card.setAttribute("data-state", targetSection);
+sections.forEach(s => s.classList.remove("is-active"));
+buttons.forEach(b => b.classList.remove("is-active"));
+e.target.classList.add("is-active");
+section.classList.add("is-active");
+};
+
+buttons.forEach(btn => {
+btn.addEventListener("click", handleButtonClick);
+});
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -891,123 +912,7 @@ html,body{
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-  <script>
-    var sleepTimer;
-var angryTimeout;
-var sleepModeOn = false;
-function mouseMove(e, el) {
-    console.log('mouse moved');
-    e.stopPropagation();
-    clearTimeout(sleepTimer);
-    if (sleepModeOn) {
-        setDefaultAnimation();
-        sleepModeOn = false;
-    }
-    var pupilLeft = document.getElementById("pupilLeft");
-    var pupilRight = document.getElementById("pupilRight")
-    var eyeLeft = document.getElementById("eyeLeft");
-    var eyeRight = document.getElementById("eyeRight");
-
-    var leftEyeHC = el.offsetLeft + eyeLeft.offsetLeft + (eyeLeft.offsetWidth / 2) //left eye horizontal center
-    var leftEyeVC = el.offsetTop + eyeLeft.offsetTop + (eyeLeft.offsetHeight / 2) //left eye horizontal center
-
-    var rightEyeHC = el.offsetLeft + eyeRight.offsetLeft + (eyeRight.offsetWidth / 2) //right eye horizontal center
-    var rightEyeVC = el.offsetTop + eyeRight.offsetTop + (eyeRight.offsetHeight / 2) //right eye horizontal center
-
-    var x = e.clientX;
-    var y = e.clientY;
-    var distanceHorizontalLE = Math.abs(x - leftEyeHC);
-    var distanceHorizontalRE = Math.abs(x - rightEyeHC);
-    var distanceVerticalLE = Math.abs(y - leftEyeVC);
-    var distanceVerticalRE = Math.abs(y - rightEyeVC);
-    var radianLE = Math.atan2(y - leftEyeVC, x - leftEyeHC);   //left eye angle from cursor in radian
-    var radianRE = Math.atan2(y - rightEyeVC, x - rightEyeHC); //right eye angle from cursor in radian
-    var angleLeft = (radianLE * (180 / Math.PI) * 1) + 180;
-    var angleRight = (radianRE * (180 / Math.PI) * 1) + 180;
-    if ((distanceHorizontalLE > 75 || distanceVerticalLE > 80) && (distanceHorizontalRE > 75 || distanceVerticalRE > 80)) {
-        eyeLeft.style.transform = "rotate(" + angleLeft + "deg)";
-        pupilLeft.style.left = "-18.5%";
-        pupilRight.style.left = "-18.5%";
-        pupilLeft.style.transform = "rotate(-" + angleLeft + "deg)";
-        eyeRight.style.transform = "rotate(" + angleRight + "deg)";
-        pupilRight.style.transform = "rotate(-" + angleRight + "deg)";
-    }
-    else {
-        pupilLeft.style.left = "0%";
-        pupilRight.style.left = "0%";
-    }
-}
-function mouseOut(e, el) {
-    console.log('mouse out');
-    e.stopPropagation();
-    pupilLeft.style.left = "0%";
-    pupilRight.style.left = "0%";
-    // clearTimeout(angryTimeout);
-    setSleepClassTimer();
-}
-function setSleepClassTimer() {
-    sleepTimer = setTimeout(function () {
-        sleepModeOn = true;
-        setAngryOrSleepAnimation();
-        console.log('sleep timer called');
-    }, 3000);
-}
-function setAngryOrSleepAnimation(mode) {
-    // if (mode === 'angry') {
-    //     var eyeBlankPart = document.getElementsByClassName('eye-blank-area');
-    //     for (var i = 0; i < eyeBlankPart.length; i++) {
-    //         eyeBlankPart[i].style.background = 'radial-gradient(white 46% ,red 100%)';
-    //     }
-    // }
-    var upperLid = document.getElementsByClassName('eye-lid-up');
-    for (var i = 0; i < upperLid.length; i++) {
-        upperLid[i].style.animation = mode === 'angry' ? 'lid-up-angry 0.5s 1 forwards' : 'lid-up-sleep 2s 1 forwards';
-    }
-    var downLid = document.getElementsByClassName('eye-lid-down');
-    for (var i = 0; i < downLid.length; i++) {
-        downLid[i].style.animation = mode === 'angry' ? 'lid-down-angry 0.5s 1 forwards' : 'lid-down-sleep 2s 1 forwards';
-    }
-    var wingLeft = document.getElementsByClassName('wing-left');
-    wingLeft[0].style.transition = 'transformation 1s';
-    wingLeft[0].style.animation = 'left-wing-sleep 1s 1 forwards';
-    var wingRight = document.getElementsByClassName('wing-right');
-    wingRight[0].style.transition = 'transformation 1s';
-    wingRight[0].style.animation = 'right-wing-sleep 1s 1 forwards';
-}
-function setDefaultAnimation() {
-    // var eyeBlankPart = document.getElementsByClassName('eye-blank-area');
-    // for (var i = 0; i < eyeBlankPart.length; i++) {
-    //     eyeBlankPart[i].style.background = 'radial-gradient(white 50% ,var(--primary-body-color) 100%)';
-    // }
-    var upperLid = document.getElementsByClassName('eye-lid-up');
-    for (var i = 0; i < upperLid.length; i++) {
-        upperLid[i].style.animation = 'lid-up-blink 2.5s infinite';
-    }
-    var downLid = document.getElementsByClassName('eye-lid-down');
-    for (var i = 0; i < downLid.length; i++) {
-        downLid[i].style.animation = 'lid-down-blink 2.5s infinite';
-    }
-    var wingLeft = document.getElementsByClassName('wing-left');
-    wingLeft[0].style.animation = 'left-wing-move 5s 0.5s infinite';
-    wingLeft[0].style.transition = '';
-    var wingRight = document.getElementsByClassName('wing-right');
-    wingRight[0].style.transition = '';
-    wingRight[0].style.animation = 'right-wing-move 5s 0.5s infinite';
-}
-function angryStart(event) {
-    event.stopPropagation();
-    console.log('angry triggered');
-    clearTimeout(angryTimeout);
-    setAngryOrSleepAnimation('angry');
-    setAngryTimeout();
-}
-function setAngryTimeout() {
-    angryTimeout = setTimeout(function () {
-        console.log('angry timeout');
-        setDefaultAnimation();
-    }, 3000);
-}
-  </script>
+ 
 </body>
 
 </html>
