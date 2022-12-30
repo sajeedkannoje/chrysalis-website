@@ -414,337 +414,380 @@
   </style>
   <style>
     @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-.wrapper .container {
-  margin: 0 auto;
-  transition: all 0.4s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.wrapper .container .scene {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  vertical-align: middle;
-}
-.wrapper .container .one,
-.wrapper .container .two,
-.wrapper .container .three,
-.wrapper .container .circle,
-.wrapper .container .p404 {
-  width: 60%;
-  height: 60%;
-  top: 20% !important;
-  left: 20% !important;
-  min-width: 400px;
-  min-height: 400px;
-}
-.wrapper .container .one .content,
-.wrapper .container .two .content,
-.wrapper .container .three .content,
-.wrapper .container .circle .content,
-.wrapper .container .p404 .content {
-  width: 600px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: content 0.8s cubic-bezier(1, 0.06, 0.25, 1) backwards;
-}
-@keyframes content {
-  0% {
-    width: 0;
-  }
-}
-.wrapper .container .one .content .piece,
-.wrapper .container .two .content .piece,
-.wrapper .container .three .content .piece,
-.wrapper .container .circle .content .piece,
-.wrapper .container .p404 .content .piece {
-  width: 200px;
-  height: 80px;
-  display: flex;
-  position: absolute;
-  border-radius: 80px;
-  z-index: 1;
-  animation: pieceLeft 8s cubic-bezier(1, 0.06, 0.25, 1) infinite both;
-}
-@keyframes pieceLeft {
-  50% {
-    left: 80%;
-    width: 10%;
-  }
-}
-@keyframes pieceRight {
-  50% {
-    right: 80%;
-    width: 10%;
-  }
-}
-@media screen and (max-width: 799px) {
-  .wrapper .container .one,
-.wrapper .container .two,
-.wrapper .container .three,
-.wrapper .container .circle,
-.wrapper .container .p404 {
-    width: 90%;
-    height: 90%;
-    top: 5% !important;
-    left: 5% !important;
-    min-width: 280px;
-    min-height: 280px;
-  }
-}
-@media screen and (max-height: 660px) {
-  .wrapper .container .one,
-.wrapper .container .two,
-.wrapper .container .three,
-.wrapper .container .circle,
-.wrapper .container .p404 {
-    min-width: 280px;
-    min-height: 280px;
-    width: 60%;
-    height: 60%;
-    top: 20% !important;
-    left: 20% !important;
-  }
-}
-.wrapper .container .text {
-  width: 60%;
-  height: 40%;
-  min-width: 400px;
-  min-height: 500px;
-  position: absolute;
-  margin: 40px 0;
-  animation: text 0.6s 1.8s ease backwards;
-}
-@keyframes text {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-}
-@media screen and (max-width: 799px) {
-  .wrapper .container .text {
-    min-height: 400px;
-    height: 80%;
-  }
-}
-.wrapper .container .text article {
-  width: 400px;
-  position: absolute;
-  bottom: 0;
-  z-index: 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media screen and (max-width: 799px) {
-  .wrapper .container .text article {
-    width: 100%;
-  }
-}
-.wrapper .container .text article p {
-  color: white;
-  font-size: 18px;
-  letter-spacing: 0.6px;
-  margin-bottom: 40px;
-  text-shadow: 6px 6px 10px #32243E;
-}
-.wrapper .container .text article button {
-  height: 40px;
-  padding: 0 30px;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0px 15px 20px rgba(54, 24, 79, 0.5);
-  z-index: 3;
-  color: #695681;
-  background-color: white;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  transition: all 0.3s ease;
-}
-.wrapper .container .text article button:hover {
-  box-shadow: 0px 10px 10px -10px rgba(54, 24, 79, 0.5);
-  transform: translateY(5px);
-  background: #FB8A8A;
-  color: white;
-}
-.wrapper .container .p404 {
-  font-size: 200px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  color: white;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 1.05) both;
-  animation-delay: 1.2s;
-}
-@media screen and (max-width: 799px) {
-  .wrapper .container .p404 {
-    font-size: 40px;
-  }
-}
-@keyframes anime404 {
-  0% {
-    opacity: 0;
-    transform: scale(10) skew(20deg, 20deg);
-  }
-}
-.wrapper .container .p404:nth-of-type(2) {
-  color: #36184F;
-  z-index: 1;
-  animation-delay: 1s;
-  filter: blur(10px);
-  opacity: 0.8;
-}
-.wrapper .container .circle {
-  position: absolute;
-}
-.wrapper .container .circle:before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background-color: rgba(54, 24, 79, 0.2);
-  border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: inset 5px 20px 40px rgba(54, 24, 79, 0.25), inset 5px 0px 5px rgba(50, 36, 62, 0.3), inset 5px 5px 20px rgba(50, 36, 62, 0.25), 2px 2px 5px rgba(255, 255, 255, 0.2);
-  animation: circle 0.8s cubic-bezier(1, 0.06, 0.25, 1) backwards;
-}
-@keyframes circle {
-  0% {
-    width: 0;
-    height: 0;
-  }
-}
-@media screen and (max-width: 799px) {
-  .wrapper .container .circle:before {
-    width:200px;
-    height: 200px;
-  }
-}
-.wrapper .container .one .content:before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-color: rgba(54, 24, 79, 0.3);
-  border-radius: 100%;
-  box-shadow: inset 5px 20px 40px rgba(54, 24, 79, 0.25), inset 5px 0px 5px rgba(50, 36, 62, 0.3), inset 5px 5px 20px rgba(50, 36, 62, 0.25), 2px 2px 5px rgba(255, 255, 255, 0.2);
-  animation: circle 0.8s 0.4s cubic-bezier(1, 0.06, 0.25, 1) backwards;
-}
-@media screen and (max-width: 799px) {
-  .wrapper .container .one .content:before {
-    width: 300px;
-    height: 300px;
-  }
-}
-.wrapper .container .one .content .piece {
-  background: linear-gradient(90deg, #8077EA 13.7%, #EB73FF 94.65%);
-}
-.wrapper .container .one .content .piece:nth-child(1) {
-  right: 15%;
-  top: 18%;
-  height: 30px;
-  width: 120px;
-  animation-delay: 0.5s;
-  animation-name: pieceRight;
-}
-.wrapper .container .one .content .piece:nth-child(2) {
-  left: 15%;
-  top: 45%;
-  width: 150px;
-  height: 50px;
-  animation-delay: 1s;
-  animation-name: pieceLeft;
-}
-.wrapper .container .one .content .piece:nth-child(3) {
-  left: 10%;
-  top: 75%;
-  height: 20px;
-  width: 70px;
-  animation-delay: 1.5s;
-  animation-name: pieceLeft;
-}
-.wrapper .container .two .content .piece {
-  background: linear-gradient(90deg, #FFEDC0 0%, #FF9D87 100%);
-}
-.wrapper .container .two .content .piece:nth-child(1) {
-  left: 0%;
-  top: 25%;
-  height: 40px;
-  width: 120px;
-  animation-delay: 2s;
-  animation-name: pieceLeft;
-}
-.wrapper .container .two .content .piece:nth-child(2) {
-  right: 15%;
-  top: 35%;
-  width: 180px;
-  height: 50px;
-  animation-delay: 2.5s;
-  animation-name: pieceRight;
-}
-.wrapper .container .two .content .piece:nth-child(3) {
-  right: 10%;
-  top: 80%;
-  height: 20px;
-  width: 160px;
-  animation-delay: 3s;
-  animation-name: pieceRight;
-}
-.wrapper .container .three .content .piece {
-  background: #FB8A8A;
-}
-.wrapper .container .three .content .piece:nth-child(1) {
-  left: 25%;
-  top: 35%;
-  height: 20px;
-  width: 80px;
-  animation-name: pieceLeft;
-  animation-delay: 3.5s;
-}
-.wrapper .container .three .content .piece:nth-child(2) {
-  right: 10%;
-  top: 55%;
-  width: 140px;
-  height: 40px;
-  animation-name: pieceRight;
-  animation-delay: 4s;
-}
-.wrapper .container .three .content .piece:nth-child(3) {
-  left: 40%;
-  top: 68%;
-  height: 20px;
-  width: 80px;
-  animation-name: pieceLeft;
-  animation-delay: 4.5s;
-}
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .wrapper .container {
+      margin: 0 auto;
+      transition: all 0.4s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .wrapper .container .scene {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      vertical-align: middle;
+    }
+
+    .wrapper .container .one,
+    .wrapper .container .two,
+    .wrapper .container .three,
+    .wrapper .container .circle,
+    .wrapper .container .p404 {
+      width: 60%;
+      height: 60%;
+      top: 20% !important;
+      left: 20% !important;
+      min-width: 400px;
+      min-height: 400px;
+    }
+
+    .wrapper .container .one .content,
+    .wrapper .container .two .content,
+    .wrapper .container .three .content,
+    .wrapper .container .circle .content,
+    .wrapper .container .p404 .content {
+      width: 600px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: content 0.8s cubic-bezier(1, 0.06, 0.25, 1) backwards;
+    }
+
+    @keyframes content {
+      0% {
+        width: 0;
+      }
+    }
+
+    .wrapper .container .one .content .piece,
+    .wrapper .container .two .content .piece,
+    .wrapper .container .three .content .piece,
+    .wrapper .container .circle .content .piece,
+    .wrapper .container .p404 .content .piece {
+      width: 200px;
+      height: 80px;
+      display: flex;
+      position: absolute;
+      border-radius: 80px;
+      z-index: 1;
+      animation: pieceLeft 8s cubic-bezier(1, 0.06, 0.25, 1) infinite both;
+    }
+
+    @keyframes pieceLeft {
+      50% {
+        left: 80%;
+        width: 10%;
+      }
+    }
+
+    @keyframes pieceRight {
+      50% {
+        right: 80%;
+        width: 10%;
+      }
+    }
+
+    @media screen and (max-width: 799px) {
+
+      .wrapper .container .one,
+      .wrapper .container .two,
+      .wrapper .container .three,
+      .wrapper .container .circle,
+      .wrapper .container .p404 {
+        width: 90%;
+        height: 90%;
+        top: 5% !important;
+        left: 5% !important;
+        min-width: 280px;
+        min-height: 280px;
+      }
+    }
+
+    @media screen and (max-height: 660px) {
+
+      .wrapper .container .one,
+      .wrapper .container .two,
+      .wrapper .container .three,
+      .wrapper .container .circle,
+      .wrapper .container .p404 {
+        min-width: 280px;
+        min-height: 280px;
+        width: 60%;
+        height: 60%;
+        top: 20% !important;
+        left: 20% !important;
+      }
+    }
+
+    .wrapper .container .text {
+      width: 60%;
+      height: 40%;
+      min-width: 400px;
+      min-height: 500px;
+      position: absolute;
+      margin: 40px 0;
+      animation: text 0.6s 1.8s ease backwards;
+    }
+
+    @keyframes text {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+    }
+
+    @media screen and (max-width: 799px) {
+      .wrapper .container .text {
+        min-height: 400px;
+        height: 80%;
+      }
+    }
+
+    .wrapper .container .text article {
+      width: 400px;
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 799px) {
+      .wrapper .container .text article {
+        width: 100%;
+      }
+    }
+
+    .wrapper .container .text article p {
+      color: white;
+      font-size: 18px;
+      letter-spacing: 0.6px;
+      margin-bottom: 40px;
+      text-shadow: 6px 6px 10px #32243E;
+    }
+
+    .wrapper .container .text article button {
+      height: 40px;
+      padding: 0 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0px 15px 20px rgba(54, 24, 79, 0.5);
+      z-index: 3;
+      color: #695681;
+      background-color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .wrapper .container .text article button:hover {
+      box-shadow: 0px 10px 10px -10px rgba(54, 24, 79, 0.5);
+      transform: translateY(5px);
+      background: #FB8A8A;
+      color: white;
+    }
+
+    .wrapper .container .p404 {
+      font-size: 200px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: white;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 2;
+      animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 1.05) both;
+      animation-delay: 1.2s;
+    }
+
+    @media screen and (max-width: 799px) {
+      .wrapper .container .p404 {
+        font-size: 40px;
+      }
+    }
+
+    @keyframes anime404 {
+      0% {
+        opacity: 0;
+        transform: scale(10) skew(20deg, 20deg);
+      }
+    }
+
+    .wrapper .container .p404:nth-of-type(2) {
+      color: #36184F;
+      z-index: 1;
+      animation-delay: 1s;
+      filter: blur(10px);
+      opacity: 0.8;
+    }
+
+    .wrapper .container .circle {
+      position: absolute;
+    }
+
+    .wrapper .container .circle:before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background-color: rgba(54, 24, 79, 0.2);
+      border-radius: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset 5px 20px 40px rgba(54, 24, 79, 0.25), inset 5px 0px 5px rgba(50, 36, 62, 0.3), inset 5px 5px 20px rgba(50, 36, 62, 0.25), 2px 2px 5px rgba(255, 255, 255, 0.2);
+      animation: circle 0.8s cubic-bezier(1, 0.06, 0.25, 1) backwards;
+    }
+
+    @keyframes circle {
+      0% {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    @media screen and (max-width: 799px) {
+      .wrapper .container .circle:before {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .wrapper .container .one .content:before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(54, 24, 79, 0.3);
+      border-radius: 100%;
+      box-shadow: inset 5px 20px 40px rgba(54, 24, 79, 0.25), inset 5px 0px 5px rgba(50, 36, 62, 0.3), inset 5px 5px 20px rgba(50, 36, 62, 0.25), 2px 2px 5px rgba(255, 255, 255, 0.2);
+      animation: circle 0.8s 0.4s cubic-bezier(1, 0.06, 0.25, 1) backwards;
+    }
+
+    @media screen and (max-width: 799px) {
+      .wrapper .container .one .content:before {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .wrapper .container .one .content .piece {
+      background: linear-gradient(90deg, #8077EA 13.7%, #EB73FF 94.65%);
+    }
+
+    .wrapper .container .one .content .piece:nth-child(1) {
+      right: 15%;
+      top: 18%;
+      height: 30px;
+      width: 120px;
+      animation-delay: 0.5s;
+      animation-name: pieceRight;
+    }
+
+    .wrapper .container .one .content .piece:nth-child(2) {
+      left: 15%;
+      top: 45%;
+      width: 150px;
+      height: 50px;
+      animation-delay: 1s;
+      animation-name: pieceLeft;
+    }
+
+    .wrapper .container .one .content .piece:nth-child(3) {
+      left: 10%;
+      top: 75%;
+      height: 20px;
+      width: 70px;
+      animation-delay: 1.5s;
+      animation-name: pieceLeft;
+    }
+
+    .wrapper .container .two .content .piece {
+      background: linear-gradient(90deg, #FFEDC0 0%, #FF9D87 100%);
+    }
+
+    .wrapper .container .two .content .piece:nth-child(1) {
+      left: 0%;
+      top: 25%;
+      height: 40px;
+      width: 120px;
+      animation-delay: 2s;
+      animation-name: pieceLeft;
+    }
+
+    .wrapper .container .two .content .piece:nth-child(2) {
+      right: 15%;
+      top: 35%;
+      width: 180px;
+      height: 50px;
+      animation-delay: 2.5s;
+      animation-name: pieceRight;
+    }
+
+    .wrapper .container .two .content .piece:nth-child(3) {
+      right: 10%;
+      top: 80%;
+      height: 20px;
+      width: 160px;
+      animation-delay: 3s;
+      animation-name: pieceRight;
+    }
+
+    .wrapper .container .three .content .piece {
+      background: #FB8A8A;
+    }
+
+    .wrapper .container .three .content .piece:nth-child(1) {
+      left: 25%;
+      top: 35%;
+      height: 20px;
+      width: 80px;
+      animation-name: pieceLeft;
+      animation-delay: 3.5s;
+    }
+
+    .wrapper .container .three .content .piece:nth-child(2) {
+      right: 10%;
+      top: 55%;
+      width: 140px;
+      height: 40px;
+      animation-name: pieceRight;
+      animation-delay: 4s;
+    }
+
+    .wrapper .container .three .content .piece:nth-child(3) {
+      left: 40%;
+      top: 68%;
+      height: 20px;
+      width: 80px;
+      animation-name: pieceLeft;
+      animation-delay: 4.5s;
+    }
   </style>
 </head>
 
@@ -767,10 +810,11 @@
           <li><a href="/">Home</a></li>
           <li><a href="#developer-about">About</a></li>
           <li><a href="#schedule">Schedule</a></li>
-          <li class="menu-active"><a href="gallery.html">Gallery</a></li>
+          <li ><a href="gallery.html">Gallery</a></li>
           <li><a href="src.html">SRC</a></li>
           <li><a href="Winners.html">Winners</a></li>
           <li><a href="">Highlights</a></li>
+          <li class="menu-active"><a href="developer.html">Developer's</a></li>
 
           <!-- <li><a href="#speakers">Speakers</a></li> -->
           <!-- <li><a href="#venue">Venue</a></li> -->
@@ -788,59 +832,52 @@
   <!-- developer section -->
   <!-- <div class="container"> -->
 
-
   <div class="container-fluid">
+    <section class="wrapper">
+      <div class="container">
+
+        <div id="scene" class="scene" data-hover-only="false">
 
 
+          <div class="circle" data-depth="1.2"></div>
 
+          <div class="one" data-depth="0.9">
+            <div class="content">
+              <span class="piece"></span>
+              <span class="piece"></span>
+              <span class="piece"></span>
+            </div>
+          </div>
 
-   <section class="wrapper">
+          <div class="two" data-depth="0.60">
+            <div class="content">
+              <span class="piece"></span>
+              <span class="piece"></span>
+              <span class="piece"></span>
+            </div>
+          </div>
 
-       <div class="container">
+          <div class="three" data-depth="0.40">
+            <div class="content">
+              <span class="piece"></span>
+              <span class="piece"></span>
+              <span class="piece"></span>
+            </div>
+          </div>
 
-           <div id="scene" class="scene" data-hover-only="false">
+          <p class="p404" data-depth="0.50">Developer's</p>
+          <p class="p404" data-depth="0.10">Developer's</p>
 
+        </div>
 
-               <div class="circle" data-depth="1.2"></div>
+        <div class="text">
+          <article>
+            <!-- <p>Uh oh! Looks like you got lost. <br>Go back to the homepage if you dare!</p> -->
+          </article>
+        </div>
 
-               <div class="one" data-depth="0.9">
-                   <div class="content">
-                       <span class="piece"></span>
-                       <span class="piece"></span>
-                       <span class="piece"></span>
-                   </div>
-               </div>
-
-               <div class="two" data-depth="0.60">
-                   <div class="content">
-                       <span class="piece"></span>
-                       <span class="piece"></span>
-                       <span class="piece"></span>
-                   </div>
-               </div>
-
-               <div class="three" data-depth="0.40">
-                   <div class="content">
-                       <span class="piece"></span>
-                       <span class="piece"></span>
-                       <span class="piece"></span>
-                   </div>
-               </div>
-
-               <p class="p404" data-depth="0.50">Developer's</p>
-               <p class="p404" data-depth="0.10">Developer's</p>
-
-           </div>
-
-           <div class="text">
-               <article>
-                   <!-- <p>Uh oh! Looks like you got lost. <br>Go back to the homepage if you dare!</p> -->
-               </article>
-           </div>
-
-       </div>
-   </section>
-
+      </div>
+    </section>
 
     <div class="row m-5">
 
@@ -942,7 +979,7 @@
               </div>
             </div>
             <div class="developer-card-buttons">
-              <button data-section="#sajeed-developer-about"  class="change-card is-active">ABOUT</button>
+              <button data-section="#sajeed-developer-about" class="change-card is-active">ABOUT</button>
               <button data-section="#sajeed-experience" class="change-card experience">EXPERIENCE</button>
               <button data-section="#sajeed-contact" class="change-card contact">CONTACT</button>
             </div>
@@ -1164,109 +1201,109 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12 mb-4">
-             <!-- Shivam Asati card  -->
-      <div class="developer-card" data-state="#shivam-developer-about">
-        <div class="developer-card-header">
-          <div class="developer-card-cover"
-            style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')">
-          </div>
-          <img class="developer-card-avatar"
-            src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-            alt="avatar" />
-          <h1 class="developer-card-fullname">Shivam Asati</h1>
-          <h2 class="developer-card-jobtitle">Front-End Developer</h2>
-        </div>
-        <div class="developer-card-main">
-          <div class="developer-card-section is-active" id="shivam-developer-about">
-            <div class="developer-card-content">
-              <div class="developer-card-subtitle">ABOUT</div>
-              <p class="developer-card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag
-                intelligentsia readymade schlitz brooklyn disrupt.
-              </p>
+        <!-- Shivam Asati card  -->
+        <div class="developer-card" data-state="#shivam-developer-about">
+          <div class="developer-card-header">
+            <div class="developer-card-cover"
+              style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')">
             </div>
-            <div class="developer-card-social">
-              <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" />
-                </svg></a>
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
-                </svg></a>
-              <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
-                  <path
-                    d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
-                  <path
-                    d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" />
-                </svg></a>
-              <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" />
-                </svg></a>
-            </div>
+            <img class="developer-card-avatar"
+              src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+              alt="avatar" />
+            <h1 class="developer-card-fullname">Shivam Asati</h1>
+            <h2 class="developer-card-jobtitle">Front-End Developer</h2>
           </div>
-          <div class="developer-card-section" id="shivam-experience">
-            <div class="developer-card-content">
-              <div class="developer-card-subtitle">WORK EXPERIENCE</div>
-              <div class="developer-card-timeline">
-                <div class="developer-card-item" data-year="2014">
-                  <div class="developer-card-item-title">Front-end Developer at <span>JotForm</span></div>
-                  <div class="developer-card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
-                </div>
-                <div class="developer-card-item" data-year="2016">
-                  <div class="developer-card-item-title">UI Developer at <span>GitHub</span></div>
-                  <div class="developer-card-item-desc">Developed new conversion funnels and disrupt.</div>
-                </div>
-                <div class="developer-card-item" data-year="2018">
-                  <div class="developer-card-item-title">Illustrator at <span>Google</span></div>
-                  <div class="developer-card-item-desc">Onboarding illustrations for App.</div>
-                </div>
-                <div class="developer-card-item" data-year="2020">
-                  <div class="developer-card-item-title">Full-Stack Developer at <span>CodePen</span></div>
-                  <div class="developer-card-item-desc">Responsible for the encomposing brand expreience.</div>
-                </div>
+          <div class="developer-card-main">
+            <div class="developer-card-section is-active" id="shivam-developer-about">
+              <div class="developer-card-content">
+                <div class="developer-card-subtitle">ABOUT</div>
+                <p class="developer-card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag
+                  intelligentsia readymade schlitz brooklyn disrupt.
+                </p>
               </div>
-            </div>
-          </div>
-          <div class="developer-card-section" id="shivam-contact">
-            <div class="developer-card-content">
-              <div class="developer-card-subtitle">CONTACT</div>
-              <div class="developer-card-contact-wrapper">
-                <div class="developer-card-contact">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  Algonquin Rd, Three Oaks Vintage, MI, 49128
-                </div>
-                <div class="developer-card-contact">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <div class="developer-card-social">
+                <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                  </svg>(269) 756-9809
-                </div>
-                <div class="developer-card-contact">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <path d="M22 6l-10 7L2 6" />
-                  </svg>
-                  william@rocheald.com
-                </div>
-                <button class="contact-me">WORK TOGETHER</button>
+                      d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" />
+                  </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
+                  </svg></a>
+                <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+                    <path
+                      d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+                    <path
+                      d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" />
+                  </svg></a>
+                <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" />
+                  </svg></a>
               </div>
             </div>
-          </div>
-          <div class="developer-card-buttons">
-            <button data-section="#developer-about" class="change-card is-active">ABOUT</button>
-            <button data-section="#experience" class="change-card">EXPERIENCE</button>
-            <button data-section="#contact" class="change-card">CONTACT</button>
+            <div class="developer-card-section" id="shivam-experience">
+              <div class="developer-card-content">
+                <div class="developer-card-subtitle">WORK EXPERIENCE</div>
+                <div class="developer-card-timeline">
+                  <div class="developer-card-item" data-year="2014">
+                    <div class="developer-card-item-title">Front-end Developer at <span>JotForm</span></div>
+                    <div class="developer-card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+                  </div>
+                  <div class="developer-card-item" data-year="2016">
+                    <div class="developer-card-item-title">UI Developer at <span>GitHub</span></div>
+                    <div class="developer-card-item-desc">Developed new conversion funnels and disrupt.</div>
+                  </div>
+                  <div class="developer-card-item" data-year="2018">
+                    <div class="developer-card-item-title">Illustrator at <span>Google</span></div>
+                    <div class="developer-card-item-desc">Onboarding illustrations for App.</div>
+                  </div>
+                  <div class="developer-card-item" data-year="2020">
+                    <div class="developer-card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+                    <div class="developer-card-item-desc">Responsible for the encomposing brand expreience.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="developer-card-section" id="shivam-contact">
+              <div class="developer-card-content">
+                <div class="developer-card-subtitle">CONTACT</div>
+                <div class="developer-card-contact-wrapper">
+                  <div class="developer-card-contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Algonquin Rd, Three Oaks Vintage, MI, 49128
+                  </div>
+                  <div class="developer-card-contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>(269) 756-9809
+                  </div>
+                  <div class="developer-card-contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <path d="M22 6l-10 7L2 6" />
+                    </svg>
+                    william@rocheald.com
+                  </div>
+                  <button class="contact-me">WORK TOGETHER</button>
+                </div>
+              </div>
+            </div>
+            <div class="developer-card-buttons">
+              <button data-section="#developer-about" class="change-card is-active">ABOUT</button>
+              <button data-section="#experience" class="change-card">EXPERIENCE</button>
+              <button data-section="#contact" class="change-card">CONTACT</button>
+            </div>
           </div>
         </div>
-      </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12  mb-4">
         <!-- Om Bhagwani card  -->
@@ -1372,7 +1409,7 @@
             </div>
           </div>
         </div>
-  
+
       </div>
     </div>
 
@@ -1397,17 +1434,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
   <script>
-      // Parallax Code
-  var scene = document.getElementById('scene');
-  var parallax = new Parallax(scene);
+    // Parallax Code
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
     $(document).ready(function () {
-      
-      $('.change-card').click(function (e) { 
+
+      $('.change-card').click(function (e) {
         e.preventDefault();
         let allData = $(this).parent().children();
-        $.each(allData, function (indexInArray, valueOfElement) { 
+        $.each(allData, function (indexInArray, valueOfElement) {
           $(valueOfElement).removeClass('is-active')
-          $(` ${ $(valueOfElement).data().section} `).removeClass('is-active')
+          $(` ${$(valueOfElement).data().section} `).removeClass('is-active')
         });
         $(`${$(this).data().section}`).addClass('is-active');
         $(this).addClass('is-active');
