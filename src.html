@@ -1,181 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Student Representative Council, MCA</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="chrysalis" name="keywords" />
+    <meta content="RCOEM MCA Chrysalis" name="description" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Student Representative Council, MCA </title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="chrysalis" name="keywords">
-  <meta content="RCOEM MCA Chrysalis" name="description">
+    <!-- Favicons -->
+    <link href="img/logo.png" rel="icon" />
+    <link href="img/logo.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="img/logo.png" rel="icon">
-  <link href="img/logo.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+      rel="stylesheet"
+    />
 
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
-    rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/venobox/venobox.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/cards.css" rel="stylesheet" />
+  </head>
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/venobox/venobox.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/cards.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!--==========================
+  <body>
+    <!--==========================
     Header
   ============================-->
-  <header id="header">
-    <div class="container">
+    <header id="header">
+      <div class="container">
+        <div id="logo" class="pull-left">
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+          <a href="#intro" class="scrollto"
+            ><img src="img/logo.png" alt="" title="CHRYSALIS"
+          /></a>
+        </div>
 
-      <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title="CHRYSALIS"></a>
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#schedule">Schedule</a></li>
+            <li ><a href="gallery.html">Gallery</a></li>
+            <li class="menu-active"><a href="src.html">SRC</a></li>
+            <li><a href="Winners.html">Winners</a></li>
+            <li ><a href="developer.html">Developer's</a></li>
+          </ul>
+        </nav>
+        <!-- #nav-menu-container -->
       </div>
+    </header>
+    <!-- #header -->
+    <style>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li class="menu-active"><a href="gallery.html">Gallery</a></li>
-          <li><a href="src.html">SRC</a></li>
-          <li><a href="Winners.html">Winners</a></li>
-          <li><a href="">Highlights</a></li>
+      /* ---- particles.js container ---- */
 
-          <!-- <li><a href="#speakers">Speakers</a></li> -->
-          <!-- <li><a href="#venue">Venue</a></li> -->
-          <!-- <li><a href="#hotels">Hotels</a></li> -->
-          <!-- <li><a href="#supporters">Sponsors</a></li> -->
-          <!-- <li><a href="#contact">Contact</a></li> -->
-          <!-- <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li> -->
+      #particles-js {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(
+          60deg,
+          #000000,
+          #555555,
+          #967bb6,
+          #00ffff
+        );
+        background-size: 1200% 1200%;
+        background-position: right;
+        transition: AnimationName infinite;
+        -webkit-animation-name: AnimationName;
+        -webkit-animation-duration: 15s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation: AnimationName 50s ease infinite;
+        -o-animation: AnimationName 50s ease infinite;
+        animation-name: AnimationName;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
 
+      @-webkit-keyframes AnimationName {
+        0% {
+          background-position: 0% 51%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 51%;
+        }
+      }
+      @-moz-keyframes AnimationName {
+        0% {
+          background-position: 0% 51%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 51%;
+        }
+      }
+      @-o-keyframes AnimationName {
+        0% {
+          background-position: 0% 51%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 51%;
+        }
+      }
+      @keyframes AnimationName {
+        0% {
+          background-position: 0% 51%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 51%;
+        }
+      }
 
-        </ul>
-      </nav><!-- #nav-menu-container -->
+      /* ---- stats.js ---- */
+
+      .count-particles {
+        background: #000022;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 80px;
+        color: #13e8e9;
+        font-size: 0.8em;
+        text-align: left;
+        text-indent: 4px;
+        line-height: 14px;
+        padding-bottom: 2px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+      }
+
+      .js-count-particles {
+        font-size: 1.1em;
+      }
+
+      #stats,
+      .count-particles {
+        -webkit-user-select: none;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+
+      #stats {
+        border-radius: 3px 3px 0 0;
+        overflow: hidden;
+      }
+
+      .count-particles {
+        border-radius: 0 0 3px 3px;
+      }
+      .banner-title{
+        position: relative;
+        top: 240px;
+        color: white;
+        font-size: 70px;
+        font-weight: 600;
+        padding: 20px;
+      }
+    </style>
+    <div id="particles-js">
+      <h1 class="banner-title">
+        Student <br> Representative Council Team
+      </h1>
     </div>
-  </header><!-- #header -->
-  <main id="main">
+    <main id="main">
 
-    <div class="guidance src"></div>
+      <div class="guidance src"></div>
 
-
-    <div class="row src m-0">
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-          <div class="img"><img src="img/src/MrinalChoudhary_Sem3_President.png" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username"> Mrinal Choudhary </span> <br>
-              <span class="userquote">President</span>
+      <div class="row src m-0">
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img">
+              <img src="img/src/MrinalChoudhary_Sem3_President.png" />
             </div>
-          </div>
-          <div class="menu-bar-wrapper">
-            <div class="menu-bar active"><a href="https://www.linkedin.com/in/mrinal-choudhary-899aa8173
-              " target="_blank" rel="noopener noreferrer"><i
-                  class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username"> Mrinal Choudhary </span> <br />
+                <span class="userquote">President</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-          <div class="img"><img src="img/src/Rohit_singh_Sem3_VicePresident.jpg" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username">Rohit Singh</span>
-              <br />
-              <span class="userquote">Vice President (Boys)</span>
-            </div>
-
-          </div>
-          <div class="menu-bar-wrapper">
-            <div class="menu-bar active"><a href="https://www.linkedin.com/in/rohit-singh-546446190
-              " target="_blank" rel="noopener noreferrer"><i
-                  class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+            <div class="menu-bar-wrapper">
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/mrinal-choudhary-899aa8173
+              "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-
-
-          <div class="img"><img src="img/src/AasaktiVinayBhongade_Sem3_VicePresident.jpg" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username">Aaskati Bhongade</span>
-              <br />
-              <span class="userquote">Vice President (Girls)</span>
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img">
+              <img src="img/src/Rohit_singh_Sem3_VicePresident.jpg" />
             </div>
-
-          </div>
-          <div class="menu-bar-wrapper">
-            <div class="menu-bar active"><a href="https://www.linkedin.com/in/aasakti-v-bhongade
-              " target="_blank" rel="noopener noreferrer"><i
-                  class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username">Rohit Singh</span>
+                <br />
+                <span class="userquote">Vice President (Boys)</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-
-
-          <div class="img"><img src="img/src/Izhan.jpeg" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username">Izhan Khan</span>
-              <br />
-              <span class="userquote">Technical Head</span>
-            </div>
-
-          </div>
-          <div class="menu-bar-wrapper">
-            <div class="menu-bar active"><a href="https://www.linkedin.com/in/izhan-khan-27308314b
-              " target="_blank" rel="noopener noreferrer"><i
-                  class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+            <div class="menu-bar-wrapper">
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/rohit-singh-546446190
+              "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img">
+              <img src="img/src/AasaktiVinayBhongade_Sem3_VicePresident.jpg" />
+            </div>
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username">Aaskati Bhongade</span>
+                <br />
+                <span class="userquote">Vice President (Girls)</span>
+              </div>
+            </div>
+            <div class="menu-bar-wrapper">
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/aasakti-v-bhongade
+              "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img"><img src="img/src/Izhan.jpeg" /></div>
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username">Izhan Khan</span>
+                <br />
+                <span class="userquote">Technical Head</span>
+              </div>
+            </div>
+            <div class="menu-bar-wrapper">
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/izhan-khan-27308314b
+              "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Rahul_Suryawanshi_Sem3_CulturalHead.jpeg" />
+            <div class="img">
+              <img src="img/src/Rahul_Suryawanshi_Sem3_CulturalHead.jpeg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -188,16 +317,18 @@
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Vaishnavi_Kotpalliwar_Sem3_BackDrop_Head.png" />
+            <div class="img">
+              <img src="img/src/Vaishnavi_Kotpalliwar_Sem3_BackDrop_Head.png" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -208,64 +339,72 @@
                 <br />
                 <span class="userquote">Back Drop Head</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://www.linkedin.com/in/vaishnavi-kotpalliwar-8a7715244
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="http://www.linkedin.com/in/vaishnavi-kotpalliwar-8a7715244
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Rishab_Sharma_Sem3_InauguralHead.jpg" />
+            <div class="img">
+              <img src="img/src/Rishab_Sharma_Sem3_InauguralHead.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username">Rishab Sharma
-                </span>
+                <span class="username">Rishab Sharma </span>
                 <br />
                 <span class="userquote"> Inaugural Head</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/rishabsharma2268
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/rishabsharma2268
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Chinmay_Nege_Sem3_RefreshmentHead.png" />
+            <div class="img">
+              <img src="img/src/Chinmay_Nege_Sem3_RefreshmentHead.png" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username"> Chinmay Nege
-                </span>
+                <span class="username"> Chinmay Nege </span>
                 <br />
                 <span class="userquote">Refreshment Head</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/chinmay-nege-0b0a20200
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/chinmay-nege-0b0a20200
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -274,7 +413,8 @@
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/PrateekPathak_Sem3_Sportshead.jpg" />
+            <div class="img">
+              <img src="img/src/PrateekPathak_Sem3_Sportshead.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -287,17 +427,22 @@
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/prateek-pathak-228a7a217
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/prateek-pathak-228a7a217
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/SakshiOza_Sem 3_Sports Head.jpg" />
+            <div class="img">
+              <img src="img/src/SakshiOza_Sem 3_Sports Head.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -308,12 +453,12 @@
                 <br />
                 <span class="userquote">Sports Head (Girls)</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -322,9 +467,8 @@
         <!-- 11 -->
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Ashutosh_Jha_Sem3_MCA_Co-ordinator.jpg" />
+            <div class="img">
+              <img src="img/src/Ashutosh_Jha_Sem3_MCA_Co-ordinator.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -333,14 +477,14 @@
               <div class="profile--info">
                 <span class="username">Ashutosh Jha</span>
                 <br />
-                <span class="userquote"> MCA Co-ordinator, Central SRC
-                </span>
+                <span class="userquote"> MCA Co-ordinator, Central SRC </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -349,7 +493,8 @@
         <!-- 12 -->
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/VivekRoy_Sem_3_Treasurer (1).jpg" />
+            <div class="img">
+              <img src="img/src/VivekRoy_Sem_3_Treasurer (1).jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -360,45 +505,48 @@
                 <br />
                 <span class="userquote">Treasurer</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Akrati_Jain_Sem3_Executive.jpg" />
+            <div class="img">
+              <img src="img/src/Akrati_Jain_Sem3_Executive.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username"> Akrati Jain </span> <br>
+                <span class="username"> Akrati Jain </span> <br />
                 <span class="userquote">Executive </span>
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/akrati-jain-66a7361a9/
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/akrati-jain-66a7361a9/
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/anubhav.png" />
-            </div>
+            <div class="img"><img src="img/src/anubhav.png" /></div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
@@ -408,22 +556,24 @@
                 <br />
                 <span class="userquote">Executive </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/anubhav-kumar-286b71200
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/anubhav-kumar-286b71200
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Ruman_Shaikh_Sem3_Executive.jpg" />
+            <div class="img">
+              <img src="img/src/Ruman_Shaikh_Sem3_Executive.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -434,18 +584,20 @@
                 <br />
                 <span class="userquote">Executive </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Sakshi_Butoliya_Sem-3_Exicutive.jpg "/>
+            <div class="img">
+              <img src="img/src/Sakshi_Butoliya_Sem-3_Exicutive.jpg " />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -456,44 +608,49 @@
                 <br />
                 <span class="userquote">Executive</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Anjali_Sharma_sem3_TnpCoordinator.jpg" />
+            <div class="img">
+              <img src="img/src/Anjali_Sharma_sem3_TnpCoordinator.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username">Anjali Sharma </span> <br>
+                <span class="username">Anjali Sharma </span> <br />
                 <span class="userquote">CDPC Team </span>
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/anjali-sharma-3045a4234
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/anjali-sharma-3045a4234
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Apeksha_Tiwari_sem3_tnpcoordinator.jpg" />
+            <div class="img">
+              <img src="img/src/Apeksha_Tiwari_sem3_tnpcoordinator.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -504,22 +661,24 @@
                 <br />
                 <span class="userquote">CDPC Team</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/apeksha-tiwari-764852246
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/apeksha-tiwari-764852246
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Anushka_Tiwari_Sem3_TeamCDPC.jpg" />
+            <div class="img">
+              <img src="img/src/Anushka_Tiwari_Sem3_TeamCDPC.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -530,19 +689,24 @@
                 <br />
                 <span class="userquote">CDPC Team</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/anushka-tiwari-1b21a81b5
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/anushka-tiwari-1b21a81b5
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Chandan_Yadav_Sem3_Member.jpeg" />
+            <div class="img">
+              <img src="img/src/Chandan_Yadav_Sem3_Member.jpeg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -553,45 +717,51 @@
                 <br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/chandan-yadav-68a341128
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/chandan-yadav-68a341128
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Karan Thanvi Sem3.jpg" />
-            </div>
+            <div class="img"><img src="img/src/Karan Thanvi Sem3.jpg" /></div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username"> Karan Thanvi </span> <br>
+                <span class="username"> Karan Thanvi </span> <br />
                 <span class="userquote">Member</span>
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/karan-thanvi-554ab6215
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/karan-thanvi-554ab6215
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Nandita_Sharma_Sem3_Member.jpg" />
+            <div class="img">
+              <img src="img/src/Nandita_Sharma_Sem3_Member.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -602,22 +772,24 @@
                 <br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/nandita-sharma-2000
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/nandita-sharma-2000
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/RishikaFaye_Sem3_Member.jpg" />
+            <div class="img">
+              <img src="img/src/RishikaFaye_Sem3_Member.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -628,19 +800,24 @@
                 <br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/rishika-faye-88182625b/
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/rishika-faye-88182625b/
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Nazneen_Merchant_Sem3_Member.jfif" />
+            <div class="img">
+              <img src="img/src/Nazneen_Merchant_Sem3_Member.jfif" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -651,24 +828,26 @@
                 <br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="www.linkedin.com/in/nazneen-zehra-996112215
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="www.linkedin.com/in/nazneen-zehra-996112215
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div class="row src m-0">
-      
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Shreya Muley  (LR 2nd year).jpg" />
+            <div class="img">
+              <img src="img/src/Shreya Muley  (LR 2nd year).jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -679,22 +858,19 @@
                 <br />
                 <span class="userquote">LR Team</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Priti_Rana_Sem3_LR.jpg" />
-            </div>
+            <div class="img"><img src="img/src/Priti_Rana_Sem3_LR.jpg" /></div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
@@ -704,19 +880,24 @@
                 <br />
                 <span class="userquote"> LR Team </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/priti-rana-508a26206
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/priti-rana-508a26206
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
-        </div> 
+        </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/jayvrat_Dwivedi_Sem1_Secretary SRC_.jpg" />
+            <div class="img">
+              <img src="img/src/jayvrat_Dwivedi_Sem1_Secretary SRC_.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -727,12 +908,16 @@
                 <br />
                 <span class="userquote">Secretary </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/jayvrat-dwivedi-a43946258
-              " target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/jayvrat-dwivedi-a43946258
+              "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -740,7 +925,8 @@
 
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Vidhi_Pitroda_Sem 1_Joint Secretary .jpg" />
+            <div class="img">
+              <img src="img/src/Vidhi_Pitroda_Sem 1_Joint Secretary .jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -751,23 +937,22 @@
                 <br />
                 <span class="userquote">Joint Secretary </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-
-       
       </div>
-
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Sajeed_Kannoje_IIICC.jpg" />
+            <div class="img">
+              <img src="img/src/Sajeed_Kannoje_IIICC.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -775,15 +960,18 @@
             <div class="user">
               <div class="profile--info">
                 <span class="username">Sajeed Kannoje</span>
-               <br />
+                <br />
                 <span class="userquote">III Cell Co-ordinator</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/sajeed-kannoje-1bb024204/" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/sajeed-kannoje-1bb024204/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -791,7 +979,8 @@
 
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Tanmay_Warokar_sem 1_Co-executive.jpg" />
+            <div class="img">
+              <img src="img/src/Tanmay_Warokar_sem 1_Co-executive.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -802,22 +991,24 @@
                 <br />
                 <span class="userquote">Co-Executives </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/tanmay-warokar-a10bba128
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/tanmay-warokar-a10bba128
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Rida_Firdous_Ansari_Sem1_Coexecutive.jpg" />
+            <div class="img">
+              <img src="img/src/Rida_Firdous_Ansari_Sem1_Coexecutive.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -828,19 +1019,26 @@
                 <span>@gobienan</span><br />
                 <span class="userquote">Co-Executives</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/rida-firdous-ansari-368b38219
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/rida-firdous-ansari-368b38219
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Satyanarayan_Jaiswal_Sem1_Div2_CoExecutive.jpg" />
+            <div class="img">
+              <img
+                src="img/src/Satyanarayan_Jaiswal_Sem1_Div2_CoExecutive.jpg"
+              />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -851,44 +1049,49 @@
                 <br />
                 <span class="userquote">Co-Executives</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Mrunali_Dhok_Sem1_co-executive_page-0001.jpg" />
+            <div class="img">
+              <img src="img/src/Mrunali_Dhok_Sem1_co-executive_page-0001.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username"> Mrunali Dhok </span> <br>
+                <span class="username"> Mrunali Dhok </span> <br />
                 <span class="userquote">Co-Executives </span>
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/mrunali-dhok-347b2625a
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/mrunali-dhok-347b2625a
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Srushti_hemnani_sem1_co-executive.jpg" />
+            <div class="img">
+              <img src="img/src/Srushti_hemnani_sem1_co-executive.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -899,22 +1102,24 @@
                 <span>@gobienan</span><br />
                 <span class="userquote">Co-Executives </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/srushti-hemnani-b51950232
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/srushti-hemnani-b51950232
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Pratik_Ambekar_sem1_div2_co-executive.jpg" />
+            <div class="img">
+              <img src="img/src/Pratik_Ambekar_sem1_div2_co-executive.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -925,12 +1130,16 @@
                 <br />
                 <span class="userquote">Co-Executives</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/pratik-ambekar-3a88b821a
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/pratik-ambekar-3a88b821a
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -938,38 +1147,32 @@
 
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Sakshi_singh_sem1_co-executive_page-0001.jpg" />
+            <div class="img">
+              <img src="img/src/Sakshi_singh_sem1_co-executive_page-0001.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username"> Sakshi Shingh </span> <br>
+                <span class="username"> Sakshi Shingh </span> <br />
                 <span class="userquote">Co-Executives</span>
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
-
-
       <div class="row src m-0">
-    
-       
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Shivam_CDPC.jpg" />
-            </div>
+            <div class="img"><img src="img/src/Shivam_CDPC.jpg" /></div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
@@ -979,19 +1182,22 @@
                 <br />
                 <span class="userquote">CDPC Team </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/shivam-asati-2488521a6/" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/shivam-asati-2488521a6/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Akansha_hade_CDPC.jpg" />
-            </div>
+            <div class="img"><img src="img/src/Akansha_hade_CDPC.jpg" /></div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
@@ -1001,13 +1207,16 @@
                 <br />
                 <span class="userquote">CDPC Team</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/akansha-hade-3216a425b
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/akansha-hade-3216a425b
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -1015,22 +1224,27 @@
 
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Sakshi_mishra_sem1_tnpcordinater. jpg.jpg" />
+            <div class="img">
+              <img src="img/src/Sakshi_mishra_sem1_tnpcordinater. jpg.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username">Sakshi Mishra </span> <br>
+                <span class="username">Sakshi Mishra </span> <br />
                 <span class="userquote">CDPC Team</span>
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/sakshi-mishra-a5ab75220
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/sakshi-mishra-a5ab75220
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -1038,7 +1252,8 @@
 
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Vedant Deorankar_Sem1_CDPC_page-0001.jpg" />
+            <div class="img">
+              <img src="img/src/Vedant Deorankar_Sem1_CDPC_page-0001.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1046,16 +1261,19 @@
             <div class="user">
               <div class="profile--info">
                 <span class="username">Vedant Deorankar</span>
-               <br />
+                <br />
                 <span class="userquote">CDPC Team</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/vedant-ajay-deorankar-62292a258
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/vedant-ajay-deorankar-62292a258
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -1063,14 +1281,9 @@
       </div>
 
       <div class="row src m-0">
-      
-       
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/ayush.jpg" />
-            </div>
+            <div class="img"><img src="img/src/ayush.jpg" /></div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
@@ -1080,18 +1293,23 @@
                 <br />
                 <span class="userquote"> CR DIV-1</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/ayush-pal-3a433a203/" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/ayush-pal-3a433a203/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Harshal Choudhary(CR) MCA SEM1 DIV2.jpg" />
+            <div class="img">
+              <img src="img/src/Harshal Choudhary(CR) MCA SEM1 DIV2.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1102,41 +1320,47 @@
                 <br />
                 <span class="userquote">CR DIV-II</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/harshal-choudhary-848440223
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/harshal-choudhary-848440223
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Nishtha_Martha_Sem1_LadyRepresentative_.jpg" />
+            <div class="img">
+              <img src="img/src/Nishtha_Martha_Sem1_LadyRepresentative_.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
             <div class="wave -three"></div>
             <div class="user">
               <div class="profile--info">
-                <span class="username"> Nistha Martha </span> <br>
+                <span class="username"> Nistha Martha </span> <br />
                 <span class="userquote"> LR DIV-I</span>
               </div>
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/VeenaKukreja_Sem1_LR.jpg" />
+            <div class="img">
+              <img src="img/src/VeenaKukreja_Sem1_LR.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1147,24 +1371,27 @@
                 <span>@gobienan</span><br />
                 <span class="userquote">LR DIV-II</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/veena-shankar-kukreja-4288b725b
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/veena-shankar-kukreja-4288b725b
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="row src m-0">
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Manas_Sharma_Sem1_Co-executive.jpg" />
+            <div class="img">
+              <img src="img/src/Manas_Sharma_Sem1_Co-executive.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1175,20 +1402,26 @@
                 <br />
                 <span class="userquote"> Co-Executives</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/manas-sharma-44a120147
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/manas-sharma-44a120147
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Sakshi_Bidkar_Sem1_SRCMember_jpg_page-0001.jpg" />
+            <div class="img">
+              <img
+                src="img/src/Sakshi_Bidkar_Sem1_SRCMember_jpg_page-0001.jpg"
+              />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1199,22 +1432,24 @@
                 <span>@gobienan</span><br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/sakshi-bidkar-7b573b1b4 
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/sakshi-bidkar-7b573b1b4 
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Rishi_Sharma_Sem1_Member.jpg" />
+            <div class="img">
+              <img src="img/src/Rishi_Sharma_Sem1_Member.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1225,19 +1460,24 @@
                 <br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/rishi-sharma-476788215/
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/rishi-sharma-476788215/
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Sandhya_Lingali_Sem1_Member.jpg" />
+            <div class="img">
+              <img src="img/src/Sandhya_Lingali_Sem1_Member.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1248,13 +1488,16 @@
                 <br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/sandhya-lingali-368339247
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/sandhya-lingali-368339247
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -1262,13 +1505,10 @@
       </div>
 
       <div class="row src m-0">
-      
-       
         <div class="col-lg-3">
           <div class="content-wrapper">
-
-
-            <div class="img"><img src="img/src/Mugdha_Bhoot_Sem1_Member.jpg" />
+            <div class="img">
+              <img src="img/src/Mugdha_Bhoot_Sem1_Member.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1279,19 +1519,24 @@
                 <br />
                 <span class="userquote">Member </span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="http://www.linkedin.com/in/mugdha-bhoot-6a98b625b
-                " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+              <div class="menu-bar active">
+                <a
+                  href="http://www.linkedin.com/in/mugdha-bhoot-6a98b625b
+                "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="content-wrapper">
-            <div class="img"><img src="img/src/Yash_Kadukar_SEM1_Member.jpg" />
+            <div class="img">
+              <img src="img/src/Yash_Kadukar_SEM1_Member.jpg" />
             </div>
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -1302,104 +1547,232 @@
                 <br />
                 <span class="userquote">Member</span>
               </div>
-
             </div>
             <div class="menu-bar-wrapper">
-              <div class="menu-bar active"><a href="https://www.linkedin.com/in/yashkadukar " target="_blank" rel="noopener noreferrer"><i
-                    class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-
+              <div class="menu-bar active">
+                <a
+                  href="https://www.linkedin.com/in/yashkadukar "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-       <!--==========================
+    <!--==========================
     Footer
   ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <img src="img/logo.png" alt="Chrysalis2023">
-            <p>This time, 'Chrysalis 2023' is not just an event, but an ultimate platform for you to show your talent
-              and prove your mettle. We will host a 4-day event starting from 5th January to 8th January. All events are
-              being managed by students of M.C.A department.</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#intro">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#about">About us</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#schedule">Event Schedule</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Gallery</a></li>
-              
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              Katol Rd, Lonand, Gittikhadan <br>
-              Nagpur, 440013<br>
-              Maharashtra <br>
-             <!-- <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>-->
-            </p>
-
-            <div class="social-links">
-              
-              <a href="https://instagram.com/chrysalis23__?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fa fa-instagram"></i></a>
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-info">
+              <img src="img/logo.png" alt="Chrysalis2023" />
+              <p>
+                This time, 'Chrysalis 2023' is not just an event, but an
+                ultimate platform for you to show your talent and prove your
+                mettle. We will host a 4-day event starting from 5th January to
+                8th January. All events are being managed by students of M.C.A
+                department.
+              </p>
             </div>
 
-          </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="fa fa-angle-right"></i> <a href="#intro">Home</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#about">About us</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#schedule">Event Schedule</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i> <a href="#">Gallery</a>
+                </li>
+              </ul>
+            </div>
 
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h4>Contact Us</h4>
+              <p>
+                Katol Rd, Lonand, Gittikhadan <br />
+                Nagpur, 440013<br />
+                Maharashtra <br />
+                <!-- <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>-->
+              </p>
+
+              <div class="social-links">
+                <a
+                  href="https://instagram.com/chrysalis23__?igshid=YmMyMTA2M2Y="
+                  class="instagram"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Chrysalis2023</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>Chrysalis2023</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!--
           All the links in the footer should remain intact.
           You can delete the links only if you purchased the pro version.
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
         -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
       </div>
-    </div>
-  </footer><!-- #footer -->
+    </footer>
+    <!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/venobox/venobox.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" ></script>
-  <script src="js/gallery.js" > 
-  </script>
-</body>
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 10,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "polygon",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 36,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 0.5,
+              opacity_min: 1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 16,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 20,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 100,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 2,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 800,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 200,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 71.92807192807193,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
 </html>
-
-  
