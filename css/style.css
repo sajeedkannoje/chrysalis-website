@@ -1057,6 +1057,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 #gallery .gallery-carousel .owl-stage-outer {
   overflow: visible;
 }
+.owl-stage-outer {
+  overflow: visible;
+}
 
 #gallery .gallery-carousel .center {
   border: 6px solid #007CC7;
