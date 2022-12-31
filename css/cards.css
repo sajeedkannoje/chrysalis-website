@@ -6,7 +6,7 @@ body {
 }
 
 .src {
-  width: 100%;
+  width: 100vw;
   /* padding-top: 300px; */
   position: relative;
 }
@@ -306,5 +306,19 @@ body {
 
   from {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width:300px) and (max-width:900px)  {
+  .content-wrapper {
+    left: 50%;
+  }
+  #particles-js {
+    top: -334px;
+  }
+  .banner-title {
+    top: 580px !important;
+    /* color: white; */
+    font-size: 46px !important;
   }
 }
