@@ -31,192 +31,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/cards.css" rel="stylesheet" />
-  <style>
-    /*Custom cursor animation*/
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
 
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @-webkit-keyframes blink {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @-moz-keyframes blink {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* ---- particles.js container ---- */
-
-    #particles-js {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: linear-gradient(60deg,
-          #000000,
-          /* #555555,
-          #967bb6,
-          #00ffff */
-        );
-      background-size: 1200% 1200%;
-      background-position: right;
-      transition: AnimationName infinite;
-      -webkit-animation-name: AnimationName;
-      -webkit-animation-duration: 15s;
-      -webkit-animation-iteration-count: infinite;
-      -moz-animation: AnimationName 50s ease infinite;
-      -o-animation: AnimationName 50s ease infinite;
-      animation-name: AnimationName;
-      animation-duration: 10s;
-      animation-iteration-count: infinite;
-    }
-
-    @-webkit-keyframes AnimationName {
-      0% {
-        background-position: 0% 51%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 51%;
-      }
-    }
-
-    @-moz-keyframes AnimationName {
-      0% {
-        background-position: 0% 51%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 51%;
-      }
-    }
-
-    @-o-keyframes AnimationName {
-      0% {
-        background-position: 0% 51%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 51%;
-      }
-    }
-
-    @keyframes AnimationName {
-      0% {
-        background-position: 0% 51%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 51%;
-      }
-    }
-
-    /* ---- stats.js ---- */
-
-    .count-particles {
-      background: #000022;
-      position: absolute;
-      top: 48px;
-      left: 0;
-      width: 80px;
-      color: #13e8e9;
-      font-size: 0.8em;
-      text-align: left;
-      text-indent: 4px;
-      line-height: 14px;
-      padding-bottom: 2px;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: bold;
-    }
-
-    .js-count-particles {
-      font-size: 1.1em;
-    }
-
-    #stats,
-    .count-particles {
-      -webkit-user-select: none;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-
-    #stats {
-      border-radius: 3px 3px 0 0;
-      overflow: hidden;
-    }
-
-    .count-particles {
-      border-radius: 0 0 3px 3px;
-    }
-
-    .banner-title {
-      position: relative;
-      top: 240px;
-      color: white;
-      font-size: 70px;
-      font-weight: 600;
-      padding: 20px;
-    }
-    #guide-heading {
-      /* position: relative;
-      display: block; */
-      text-align: center;
-      height: 60vh;
-      width: 70%;
-      align-items: center;
-      justify-content: center;
-      /* background-color: red; */
-    }
-    .guidance {
-      display: block;
-      /* margin-bottom:10% ; */
-    }
-  </style>
 </head>
 
 <body>
@@ -238,7 +53,7 @@
           <li><a href="index.html#schedule">Schedule</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li class="menu-active"><a href="src.html">SRC</a></li>
-          <!-- <li><a href="Winners.html">Winners</a></li> -->
+          <li><a href="Winners.html">Winners</a></li>
           <li><a href="developer.html">Developer's</a></li>
         </ul>
       </nav>
@@ -247,104 +62,104 @@
   </header>
   <!-- #header -->
 
-  <div id="particles-js">
+
+  <main id="main">
+    
+    <div id="particles-js">
+    </div>
     <h1 class="banner-title">
       MCA <br> Students Representative Council (SRC)
     </h1> 
-    
-  </div>
-  
+  </main>
   <main id="main">
-    
-    <!-- Our guidance -->
-    <div class="container" id="guide-heading">
-      <h1 class="banner-title display-1">Our Guide</h1>
-    </div>
-   
-    <div class="row src m-0">
-
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-          <div class="img">
-            <img src="img/src/unknown.jpg" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username"> DR. PREETI VODITEL </span> <br />
-              <span class="username"> HEAD OF DEPARTMENT, COMPUTER APPLICATION</span>
-            </div>
-          </div>
-        </div>
+      <!-- Our guidance -->
+      <div class="container my-5" id="guide-heading">
+        <h1 class="guidance-text display-1">Our Guide</h1>
       </div>
-
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-          <div class="img">
-            <img src="img/src/unknown.jpg" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username"> PROF SATYAJIT UPARKAR </span> <br />
-              <span class="username"> PROFESSOR INCHARGE, CHRYSALIS'23</span>
-            </div>
-          </div>
-          <div class="menu-bar-wrapper">
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-          <div class="img">
-            <img src="img/src/unknown.jpg" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username"> PROF SATYAJIT UPARKAR </span> <br />
-              <span class="username"> PROFESSOR INCHARGE, CHRYSALIS'23</span>
-            </div>
-          </div>
-          <div class="menu-bar-wrapper">
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3">
-        <div class="content-wrapper">
-          <div class="img">
-            <img src="img/src/unknown.jpg" />
-          </div>
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-          <div class="user">
-            <div class="profile--info">
-              <span class="username"> PROF SATYAJIT UPARKAR </span> <br />
-              <span class="username"> PROFESSOR INCHARGE, CHRYSALIS'23</span>
-            </div>
-          </div>
-          <div class="menu-bar-wrapper">
-          </div>
-        </div>
-      </div>
-    </div>
-
-
+      <div class="row src m-0 p-0 p-0">
   
-<div class="container" id="guide-heading">
-  <h1 class="banner-title display-1">SRC Team</h1>
-</div>
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img">
+              <img src="img/src/unknown.jpg" />
+            </div>
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username"> DR. PREETI VODITEL </span> <br />
+                <span class="username"> HEAD OF DEPARTMENT, COMPUTER APPLICATION</span>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img">
+              <img src="img/src/unknown.jpg" />
+            </div>
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username"> PROF SATYAJIT UPARKAR </span> <br />
+                <span class="username"> PROFESSOR INCHARGE, CHRYSALIS'23</span>
+              </div>
+            </div>
+            <div class="menu-bar-wrapper">
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img">
+              <img src="img/src/unknown.jpg" />
+            </div>
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username"> PROF SATYAJIT UPARKAR </span> <br />
+                <span class="username"> PROFESSOR INCHARGE, CHRYSALIS'23</span>
+              </div>
+            </div>
+            <div class="menu-bar-wrapper">
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <div class="img">
+              <img src="img/src/unknown.jpg" />
+            </div>
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="user">
+              <div class="profile--info">
+                <span class="username"> PROF SATYAJIT UPARKAR </span> <br />
+                <span class="username"> PROFESSOR INCHARGE, CHRYSALIS'23</span>
+              </div>
+            </div>
+            <div class="menu-bar-wrapper">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
     
-    <div class="row src m-0">
+    <div class="container my-5" id="guide-heading">
+      <h1 class="guidance-text display-1">SRC Team</h1>
+    </div>
+      
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -416,7 +231,7 @@
           </div>
         </div>
       </div>
-
+  
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img"><img src="img/src/Izhan.jpeg" /></div>
@@ -440,7 +255,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -538,7 +353,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -587,7 +402,7 @@
           </div>
         </div>
       </div>
-
+  
       <!-- 11 -->
       <div class="col-lg-3">
         <div class="content-wrapper">
@@ -613,7 +428,7 @@
           </div>
         </div>
       </div>
-
+  
       <!-- 12 -->
       <div class="col-lg-3">
         <div class="content-wrapper">
@@ -640,7 +455,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -735,7 +550,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -832,7 +647,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img"><img src="img/src/Karan Thanvi Sem3.jpg" /></div>
@@ -927,7 +742,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -998,7 +813,7 @@
           </div>
         </div>
       </div>
-
+  
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1024,7 +839,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1049,7 +864,7 @@
           </div>
         </div>
       </div>
-
+  
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1123,7 +938,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1195,7 +1010,7 @@
           </div>
         </div>
       </div>
-
+  
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1220,7 +1035,7 @@
         </div>
       </div>
     </div>
-    <div class="row src m-0">
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img"><img src="img/src/Shivam_CDPC.jpg" /></div>
@@ -1265,7 +1080,7 @@
           </div>
         </div>
       </div>
-
+  
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1289,7 +1104,7 @@
           </div>
         </div>
       </div>
-
+  
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1315,8 +1130,8 @@
         </div>
       </div>
     </div>
-
-    <div class="row src m-0">
+  
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img"><img src="img/src/ayush.jpg" /></div>
@@ -1411,8 +1226,8 @@
         </div>
       </div>
     </div>
-
-    <div class="row src m-0">
+  
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1510,8 +1325,8 @@
         </div>
       </div>
     </div>
-
-    <div class="row src m-0">
+  
+    <div class="row src m-0 p-0">
       <div class="col-lg-3">
         <div class="content-wrapper">
           <div class="img">
@@ -1665,11 +1480,11 @@
           value: 10,
           density: {
             enable: true,
-            value_area: 800,
+            value_area: 80,
           },
         },
         color: {
-          value: "#ffffff",
+          value: "#d4e8f5",
         },
         shape: {
           type: "polygon",

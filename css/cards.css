@@ -322,3 +322,176 @@ body {
     font-size: 46px !important;
   }
 }
+
+
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+/* ---- stats.js ---- */
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+.banner-title {
+  position: absolute;
+  top: 240px;
+  color: white;
+  font-size: 70px;
+  font-weight: 600;
+  padding: 20px;
+}
+#guide-heading {
+  /* position: relative;
+  display: block; */
+  text-align: center;
+  /* height: 60vh; */
+  width: 70%;
+
+}
+.guidance {
+  display: block;
+  /* margin-bottom:10% ; */
+}
+.guidance-text{
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
