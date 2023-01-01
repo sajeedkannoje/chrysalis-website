@@ -19,6 +19,9 @@
 
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -52,7 +55,7 @@
             <li><a href="index.html#schedule">Schedule</a></li>
             <li ><a href="gallery.html">Gallery</a></li>
             <li class="menu-active"><a href="src.html">SRC</a></li>
-            <li><a href="Winners.html">Winners</a></li>
+            <!-- <li><a href="Winners.html">Winners</a></li> -->
             <li ><a href="developer.html">Developer's</a></li>
           </ul>
         </nav>
@@ -61,6 +64,42 @@
     </header>
     <!-- #header -->
     <style>
+  
+
+/*Custom cursor animation*/
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
       /* ---- particles.js container ---- */
 
@@ -180,13 +219,60 @@
       }
     </style>
     <div id="particles-js">
+
+      
+
       <h1 class="banner-title">
-        MCA <br> Students Representative Council (SRC)
-      </h1>
+       MCA <br> Students Representative Council (SRC)
+      </h1> 
+     
+    </div>
+     
+
+
     </div>
     <main id="main">
+        
+      <!-- Our guidance -->
+<div class="guidance">
 
-      <div class="guidance src"></div>
+      <div class="row src m-0">
+          <div class="col-lg-3">
+            <div class="content-wrapper">
+              <div class="img">
+                <img src="img/src/unknown.jpg" />
+              </div>
+              <div class="wave -one"></div>
+              <div class="wave -two"></div>
+              <div class="wave -three"></div>
+              <div class="user">
+                <div class="profile--info">
+                  <span class="username"> DR. PREETI VODITE </span> <br />
+                  <span class="username"> HEAD OF DEPARTMENT, COMPUTER APPLICATION</span>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+            <div class="col-lg-3">
+              <div class="content-wrapper">
+                <div class="img">
+                  <img src="img/src/unknown.jpg" />
+                </div>
+                <div class="wave -one"></div>
+                <div class="wave -two"></div>
+                <div class="wave -three"></div>
+                <div class="user">
+                  <div class="profile--info">
+                    <span class="username"> PROF SATYAJIT UPARKAR </span> <br />
+                    <span class="username"> PROFESSOR INCHARGE, CHRYSALIS'23</span>
+                  </div>
+                </div>
+                <div class="menu-bar-wrapper">
+              </div>
+            </div>
+            </div>
+           </div>
 
       <div class="row src m-0">
         <div class="col-lg-3">
@@ -1603,9 +1689,7 @@
             <div class="col-lg-3 col-md-6 footer-contact">
               <h4>Contact Us</h4>
               <p>
-                Katol Rd, Lonand, Gittikhadan <br />
-                Nagpur, 440013<br />
-                Maharashtra <br />
+                Department of Computer Application, Shri Ramdeobaba College of Engineering & Management, katol Road, Gittikhadan, Nagpur <br />
                 <!-- <strong>Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> info@example.com<br>-->
               </p>
@@ -1633,7 +1717,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
         -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed & Developed by <a href="developer.html"> Technical Team, SRC</a>
         </div>
       </div>
     </footer>
@@ -1773,6 +1857,8 @@
         },
         retina_detect: true,
       });
+
+     
     </script>
   </body>
 </html>
