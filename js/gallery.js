@@ -18,10 +18,7 @@ $(function(){
               <img src="${imagen}">
               <p class="desc">${descripcion}</p>
             </div>
-            <div class="controles">
-              <div class="control av"></div>
-              <div class="control ret"></div>
-            </div>
+    
           </div>`
         )
         $('.fullPreview').fadeIn().css('display','flex');
