@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 body {
-  background-color: #343436;
+  background-color: #ffffff;
 }
 
 .src {
@@ -361,6 +361,23 @@ body {
   position: relative;
   width: 100%;
   top: 0;
+  background: linear-gradient(60deg,
+  #ffffff,
+  #007CC7,
+  #967bb6,
+  #00ffff
+);
+background-size: 1200% 1200%;
+background-position: right;
+transition: AnimationName infinite;
+-webkit-animation-name: AnimationName;
+-webkit-animation-duration: 15s;
+-webkit-animation-iteration-count: infinite;
+-moz-animation: AnimationName 50s ease infinite;
+-o-animation: AnimationName 50s ease infinite;
+animation-name: AnimationName;
+animation-duration: 10s;
+animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -478,7 +495,7 @@ body {
   /* margin-bottom:10% ; */
 }
 .guidance-text{
-  color: white;
+  color: #0e1b4d;
   font-weight: 600;
   text-align: center;
 }
