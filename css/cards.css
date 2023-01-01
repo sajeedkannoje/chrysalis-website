@@ -361,12 +361,7 @@ body {
   position: relative;
   width: 100%;
   top: 0;
-  background: linear-gradient(60deg,
-  #ffffff,
-  #007CC7,
-  #967bb6,
-  #00ffff
-);
+  background:#007CC7;
 background-size: 1200% 1200%;
 background-position: right;
 transition: AnimationName infinite;
