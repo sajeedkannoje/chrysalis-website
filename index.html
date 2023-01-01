@@ -22,6 +22,112 @@
     <!-- Main Stylesheet File -->
     <link rel="stylesheet" href="css/banner.css">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+
+      .intro__headline,
+      .intro__subheadline,
+      .cd__digits,
+      .cd__unit-label,
+      .cd__progress {
+        font-family: Inconsolata, monospace;
+      }
+      .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        min-height: 19.5em;
+        padding: 1.5em;
+      }
+      .intro__headline {
+        font-size: 3em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .intro__subheadline {
+        color: var(--fg2);
+        text-align: center;
+      }
+      .cd,
+      .cd__unit-group,
+      .cd__digits {
+        display: flex;
+        justify-content: center;
+      }
+      .cd {
+        flex-wrap: wrap;
+        text-align: center;
+        flex-wrap: wrap;
+        text-align: center;
+        color: #ffffff !important;
+        transition: all 0.3s ease;
+        z-index: 3;
+        position: relative;
+        -ms-user-select: none;
+      }
+      .cd__unit-group {
+        margin-bottom: 1.5em;
+      }
+      .cd__unit {
+        font-size: 3.75em;
+        line-height: 1;
+        margin: 0 0.75rem;
+        width: 2ch;
+      }
+      .cd__digits,
+      .cd__digit {
+        position: relative;
+      }
+      .cd__digits {
+        box-shadow:
+          0 0.1em 0.05em var(--bg1) inset,
+          0 -0.1em 0.05em var(--bg1) inset;
+        font-weight: bold;
+        height: 3.75rem;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+      }
+      .cd__digit {
+        width: 1ch;
+        z-index: -1;
+      }
+      .cd__digit--roll-in {
+        animation: rollIn 0.5s ease-in-out;
+      }
+      .cd__next-digit-fade {
+        animation: fade 0.5s ease-in-out;
+      }
+      .cd__prev-digit-fade {
+        animation: fade 0.5s ease-in-out reverse;
+      }
+      .cd__unit-label {
+        color: var(--fg2);
+        font-size: 0.75rem;
+        line-height: 1;
+      }
+      .cd__progress {
+        width: 100%;
+      }
+      
+      .content__wrap {
+        margin: auto;
+        padding: 3em 1.5em 1.5em;
+        max-width: 32em;
+      }
+      
+      
+      
+      /* Animations */
+      @keyframes rollIn {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+      }
+      @keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      </style>
+      
   </head>
   <body>
     <!--==========================
@@ -65,6 +171,10 @@
     <!--==========================
     Intro Section
   ============================-->
+
+
+
+
     <section id="intro">
       <div class="intro-container wow fadeIn">
         <div class="chrysalis-banner">
@@ -103,6 +213,64 @@
             <span class="loader-text-span">E</span>
             <span class="loader-text-span">R</span>
           </h5>
+          <div class="cd">
+            <div class="cd__unit-group">
+              <div class="cd__unit">
+                <div class="cd__digits">
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                </div>
+                <div class="cd__unit-label">Day(s)</div>
+              </div>
+            </div>
+            <div class="cd__unit-group">
+              <div class="cd__unit">
+                <div class="cd__digits">
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                </div>
+                <div class="cd__unit-label">Hour(s)</div>
+              </div>
+              <div class="cd__unit">
+                <div class="cd__digits">
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                </div>
+                <div class="cd__unit-label">Minute(s)</div>
+              </div>
+              <div class="cd__unit">
+                <div class="cd__digits">
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                  <div class="cd__digit" data-col>
+                    <div data-pos="next">-</div>
+                    <div data-pos="prev">-</div>
+                  </div>
+                </div>
+                <div class="cd__unit-label">Second(s)</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <canvas class="background"></canvas>
@@ -734,10 +902,10 @@
         </div>
       </div>
     </footer>
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
     <!-- #footer
 
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-																																																																		<!-- JavaScript Libraries -->
+<!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -776,6 +944,142 @@
           }
         }
       })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded",() => {
+      const uec = new UnixEpochalypseCountdown(".cd");
+      const infoBtn = document.getElementById("info-btn");
+    
+      if (infoBtn) infoBtn.addEventListener("click",jumpToHelp);
+     });
+  
+  function jumpToHelp() {
+    const info = document.getElementById("info");
+  
+    if (info) {
+      window.scrollTo({
+        top: info.offsetTop,
+        left: 0,
+        behavior: "smooth"
+      });
+    }
+  }
+  
+  class UnixEpochalypseCountdown {
+    constructor(qs) {
+      this.el = document.querySelector(qs);
+      this.time = [];
+      this.animTimeout = null;
+      this.updateTimeout = null;
+      this.update();
+    }
+    getProgressInSeconds() {
+      if (typeof moment === "function") {
+        const now = moment();
+        const ms = Math.ceil(now.valueOf() / 1e3);
+        return ms >> 0;
+      } else {
+        return 0;
+      }
+    }
+    getTimeLeft() {
+      let timeLeft = {
+        d: 0,
+        h: 0,
+        m: 0,
+        s: 0
+      };
+  
+      if (typeof moment === "function") {
+        const later = moment("2023-01-05 10:00 am");
+        const now = moment();
+        const diff = moment.duration(later.diff(now));
+  
+        if (diff.valueOf() >= 0) {
+          timeLeft.d += diff.days();
+          timeLeft.h += diff.hours();
+          timeLeft.m += diff.minutes();
+          timeLeft.s += diff.seconds();
+        }else{
+          $('.cd').remove()
+        }
+      }
+  
+      return timeLeft;
+    }
+    clearAnimations() {
+      if (this.el) {
+        const colAnimsToClear = this.el.querySelectorAll("[data-col]");
+  
+        Array.from(colAnimsToClear).forEach(a => {
+          a.classList.remove("cd__digit--roll-in");
+        });
+  
+        const posAnimsToClear = this.el.querySelectorAll("[data-pos]");
+  
+        Array.from(posAnimsToClear).forEach(a => {
+          a.classList.remove("cd__next-digit-fade","cd__prev-digit-fade");
+        });
+      }
+    }
+    update(doAnimations = false) {
+      // start with all dashes
+      if (!this.time.length) {
+        let digitCount = 12;
+  
+        while (digitCount--)
+          this.time.push("-");
+      }
+      // update data
+      const display = this.getTimeLeft();
+      const displayDigits = [];
+  
+      for (let v in display) {
+        const digits = `${display[v]}`.split("");
+        // add zero to single digits
+        if (digits.length < 2)
+          digits.unshift("0");
+  
+        displayDigits.push(...digits);
+      }
+      // update display
+      const cols = this.el.querySelectorAll("[data-col]");
+  
+      if (cols) {
+        Array.from(cols).forEach((c,i) => {
+          const digit = displayDigits[i];
+  
+          if (digit !== this.time[i]) {
+            const next = c.querySelector(`[data-pos="next"]`);
+            const prev = c.querySelector(`[data-pos="prev"]`);
+  
+            if (doAnimations === true) {
+              c.classList.add("cd__digit--roll-in");
+              next.classList.add("cd__next-digit-fade");
+              prev.classList.add("cd__prev-digit-fade");
+            }
+  
+            next.innerHTML = digit;
+            prev.innerHTML = this.time[i];
+          }
+        });
+      }
+  
+      this.time = displayDigits;
+      // progress in seconds
+      const progress = this.el.querySelector("[data-progress]");
+  
+      if (progress)
+        progress.innerHTML = this.getProgressInSeconds();
+      // loop
+      clearTimeout(this.animTimeout);
+      this.animTimeout = setTimeout(this.clearAnimations.bind(this),500);
+  
+      clearTimeout(this.updateTimeout);
+      this.updateTimeout = setTimeout(this.update.bind(this,true),1e3);
+    }
+  }
     </script>
   </body>
 </html>
