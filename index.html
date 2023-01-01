@@ -956,11 +956,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded",() => {
-    const uec = new UnixEpochalypseCountdown(".cd");
-    const infoBtn = document.getElementById("info-btn");
-  
-    if (infoBtn) infoBtn.addEventListener("click",jumpToHelp);
-  });
+      const uec = new UnixEpochalypseCountdown(".cd");
+      const infoBtn = document.getElementById("info-btn");
+    
+      if (infoBtn) infoBtn.addEventListener("click",jumpToHelp);
+     });
   
   function jumpToHelp() {
     const info = document.getElementById("info");
@@ -986,7 +986,6 @@
       if (typeof moment === "function") {
         const now = moment();
         const ms = Math.ceil(now.valueOf() / 1e3);
-  
         return ms >> 0;
       } else {
         return 0;
@@ -1001,7 +1000,7 @@
       };
   
       if (typeof moment === "function") {
-        const later = moment("2023-01-05 10:00");
+        const later = moment("2023-01-05 10:00 am");
         const now = moment();
         const diff = moment.duration(later.diff(now));
   
@@ -1010,6 +1009,8 @@
           timeLeft.h += diff.hours();
           timeLeft.m += diff.minutes();
           timeLeft.s += diff.seconds();
+        }else{
+          $('.cd').remove()
         }
       }
   
