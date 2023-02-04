@@ -1,1127 +1,1261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Chrysalis 2023 |Department of Computer Application, RCOEM</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="chrysalis" name="keywords">
-    <meta content="RCOEM MCA Chrysalis" name="description">
-    <!-- Favicons -->
-    <link href="img/logo.png" rel="icon">
-    <link href="img/logo.png" rel="apple-touch-icon">
-    <link rel="stylesheet" href="./css/developer.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/venobox/venobox.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <!-- Main Stylesheet File -->
-    <link rel="stylesheet" href="css/banner.css">
-    <link href="css/style.css" rel="stylesheet">
-    <style>
 
-      .intro__headline,
-      .intro__subheadline,
-      .cd__digits,
-      .cd__unit-label,
-      .cd__progress {
-        font-family: Inconsolata, monospace;
-      }
-      .intro {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-        min-height: 19.5em;
-        padding: 1.5em;
-      }
-      .intro__headline {
-        font-size: 3em;
-        line-height: 1;
-        text-transform: uppercase;
-      }
-      .intro__subheadline {
-        color: var(--fg2);
-        text-align: center;
-      }
-      .cd,
-      .cd__unit-group,
-      .cd__digits {
-        display: flex;
-        justify-content: center;
-      }
-      .cd {
-        flex-wrap: wrap;
-        text-align: center;
-        flex-wrap: wrap;
-        text-align: center;
-        color: #ffffff !important;
-        transition: all 0.3s ease;
-        z-index: 3;
-        position: relative;
-        -ms-user-select: none;
-      }
-      .cd__unit-group {
-        margin-bottom: 1.5em;
-      }
-      .cd__unit {
-        font-size: 3.75em;
-        line-height: 1;
-        margin: 0 0.75rem;
-        width: 2ch;
-      }
-      .cd__digits,
-      .cd__digit {
-        position: relative;
-      }
-      .cd__digits {
-        box-shadow:
-          0 0.1em 0.05em var(--bg1) inset,
-          0 -0.1em 0.05em var(--bg1) inset;
-        font-weight: bold;
-        height: 3.75rem;
-        margin-bottom: 0.5rem;
-        overflow: hidden;
-      }
-      .cd__digit {
-        width: 1ch;
-        z-index: -1;
-      }
-      .cd__digit--roll-in {
-        animation: rollIn 0.5s ease-in-out;
-      }
-      .cd__next-digit-fade {
-        animation: fade 0.5s ease-in-out;
-      }
-      .cd__prev-digit-fade {
-        animation: fade 0.5s ease-in-out reverse;
-      }
-      .cd__unit-label {
-        color: var(--fg2);
-        font-size: 0.75rem;
-        line-height: 1;
-      }
-      .cd__progress {
-        width: 100%;
-      }
-      
-      .content__wrap {
-        margin: auto;
-        padding: 3em 1.5em 1.5em;
-        max-width: 32em;
-      }
-      
-      
-      
-      /* Animations */
-      @keyframes rollIn {
-        from { transform: translateY(-100%); }
-        to { transform: translateY(0); }
-      }
-      @keyframes fade {
-        from { opacity: 0; }
-        to { opacity: 1; }
+<head>
+  <meta charset="utf-8">
+  <title>Chrysalis 2023 |Department of Computer Application, RCOEM</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="chrysalis" name="keywords">
+  <meta content="RCOEM MCA Chrysalis" name="description">
+  <!-- Favicons -->
+  <link href="img/logo.png" rel="icon">
+  <link href="img/logo.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="./css/developer.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="css/banner.css">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    .intro__headline,
+    .intro__subheadline,
+    .cd__digits,
+    .cd__unit-label,
+    .cd__progress {
+      font-family: Inconsolata, monospace;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      min-height: 19.5em;
+      padding: 1.5em;
+    }
+
+    .intro__headline {
+      font-size: 3em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .intro__subheadline {
+      color: var(--fg2);
+      text-align: center;
+    }
+
+    .cd,
+    .cd__unit-group,
+    .cd__digits {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cd {
+      flex-wrap: wrap;
+      text-align: center;
+      flex-wrap: wrap;
+      text-align: center;
+      color: #ffffff !important;
+      transition: all 0.3s ease;
+      z-index: 3;
+      position: relative;
+      -ms-user-select: none;
+    }
+
+    .cd__unit-group {
+      margin-bottom: 1.5em;
+    }
+
+    .cd__unit {
+      font-size: 3.75em;
+      line-height: 1;
+      margin: 0 0.75rem;
+      width: 2ch;
+    }
+
+    .cd__digits,
+    .cd__digit {
+      position: relative;
+    }
+
+    .cd__digits {
+      box-shadow:
+        0 0.1em 0.05em var(--bg1) inset,
+        0 -0.1em 0.05em var(--bg1) inset;
+      font-weight: bold;
+      height: 3.75rem;
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+    }
+
+    .cd__digit {
+      width: 1ch;
+      z-index: -1;
+    }
+
+    .cd__digit--roll-in {
+      animation: rollIn 0.5s ease-in-out;
+    }
+
+    .cd__next-digit-fade {
+      animation: fade 0.5s ease-in-out;
+    }
+
+    .cd__prev-digit-fade {
+      animation: fade 0.5s ease-in-out reverse;
+    }
+
+    .cd__unit-label {
+      color: var(--fg2);
+      font-size: 0.75rem;
+      line-height: 1;
+    }
+
+    .cd__progress {
+      width: 100%;
+    }
+
+    .content__wrap {
+      margin: auto;
+      padding: 3em 1.5em 1.5em;
+      max-width: 32em;
+    }
+
+
+
+    /* Animations */
+    @keyframes rollIn {
+      from {
+        transform: translateY(-100%);
       }
 
-      .slider-img img {
-        width: 260px;
-        height: 350px;
+      to {
+        transform: translateY(0);
       }
-      </style>
-      
-  </head>
-  <body>
-    <!--==========================
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .slider-img img {
+      width: 260px;
+      height: 350px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--==========================
     Header
   ============================-->
-    <header id="header">
-      <div class="container">
-        <div id="logo" class="pull-left">
-          <!-- Uncomment below if you prefer to use a text logo -->
-          <a href="#intro" class="scrollto">
-            <img loading="lazy" src="img/logo.png" alt="" title="CHRYSALIS">
-          </a>
-        </div>
-        <nav id="nav-menu-container">
-          <ul class="nav-menu">
-            <li class="menu-active">
-              <a href="/">Home</a>
-            </li>
-            <!-- <li>
+  <header id="header">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <a href="#intro" class="scrollto">
+          <img loading="lazy" src="img/logo.png" alt="" title="CHRYSALIS">
+        </a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active">
+            <a href="/">Home</a>
+          </li>
+          <!-- <li>
               <a href="#about">About</a>
             </li> -->
-            <li>
-              <a href="#schedule">Schedule</a>
-            </li>
-            <li>
-              <a href="https://rcoem.in/anon_evForm.htm?ev=138">Payment Link</a>
-            </li>
-            <li>
-              <a href="#">D2C Registration</a>
-            </li>
-            <li>
-              <a href="gallery.html">Gallery</a>
-            </li>
-            
-            <li>
-              <a href="src.html">SRC</a>
-            </li>
-           
-            <li>
+          <li>
+            <a href="#schedule">Schedule</a>
+          </li>
+          <li>
+            <a href="https://rcoem.in/anon_evForm.htm?ev=138">Payment Link</a>
+          </li>
+          <li>
+            <a href="#">D2C Registration</a>
+          </li>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
 
-              <a href="technical-team.html">Technical Team</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- #nav-menu-container -->
-      </div>
-    </header>
-    <!-- #header -->
-    <!--==========================
+          <li>
+            <a href="src.html">SRC</a>
+          </li>
+
+          <li>
+
+            <a href="technical-team.html">Technical Team</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+  <!--==========================
     Intro Section
   ============================-->
 
 
 
 
-    <section id="intro">
-      <div class="intro-container wow fadeIn">
-        <div class="chrysalis-banner">
-          <img loading="lazy" class="chrysalis-fly-logo" src="img/logo-just-fly.png" alt="" srcset="">
-          <h1 class="chrysalis-title">Chrysalis <span>2023</span>
-          </h1>
-          <h5 class="span loader-text">
-            <span class="loader-text-span">L</span>
-            <span class="loader-text-span">E</span>
-            <span class="loader-text-span">T</span>
-            <span class="loader-text-span">'</span>
-            <span class="loader-text-span">S</span>
-            <span class="loader-text-span">&nbsp;</span>
-            <span class="loader-text-span">C</span>
-            <span class="loader-text-span">R</span>
-            <span class="loader-text-span">E</span>
-            <span class="loader-text-span">A</span>
-            <span class="loader-text-span">T</span>
-            <span class="loader-text-span">E</span>
-            <span class="loader-text-span">&nbsp;</span>
-            <span class="loader-text-span">M</span>
-            <span class="loader-text-span">E</span>
-            <span class="loader-text-span">M</span>
-            <span class="loader-text-span">O</span>
-            <span class="loader-text-span">R</span>
-            <span class="loader-text-span">I</span>
-            <span class="loader-text-span">E</span>
-            <span class="loader-text-span">S</span>
-            <span class="loader-text-span">&nbsp;</span>
-            <span class="loader-text-span">T</span>
-            <span class="loader-text-span">O</span>
-            <span class="loader-text-span">G</span>
-            <span class="loader-text-span">E</span>
-            <span class="loader-text-span">T</span>
-            <span class="loader-text-span">H</span>
-            <span class="loader-text-span">E</span>
-            <span class="loader-text-span">R</span>
-          </h5>
-          <div class="cd">
-            <div class="cd__unit-group">
-              <div class="cd__unit">
-                <div class="cd__digits">
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <div class="chrysalis-banner">
+        <img loading="lazy" class="chrysalis-fly-logo" src="img/logo-just-fly.png" alt="" srcset="">
+        <h1 class="chrysalis-title">Chrysalis <span>2023</span>
+        </h1>
+        <h5 class="span loader-text">
+          <span class="loader-text-span">L</span>
+          <span class="loader-text-span">E</span>
+          <span class="loader-text-span">T</span>
+          <span class="loader-text-span">'</span>
+          <span class="loader-text-span">S</span>
+          <span class="loader-text-span">&nbsp;</span>
+          <span class="loader-text-span">C</span>
+          <span class="loader-text-span">R</span>
+          <span class="loader-text-span">E</span>
+          <span class="loader-text-span">A</span>
+          <span class="loader-text-span">T</span>
+          <span class="loader-text-span">E</span>
+          <span class="loader-text-span">&nbsp;</span>
+          <span class="loader-text-span">M</span>
+          <span class="loader-text-span">E</span>
+          <span class="loader-text-span">M</span>
+          <span class="loader-text-span">O</span>
+          <span class="loader-text-span">R</span>
+          <span class="loader-text-span">I</span>
+          <span class="loader-text-span">E</span>
+          <span class="loader-text-span">S</span>
+          <span class="loader-text-span">&nbsp;</span>
+          <span class="loader-text-span">T</span>
+          <span class="loader-text-span">O</span>
+          <span class="loader-text-span">G</span>
+          <span class="loader-text-span">E</span>
+          <span class="loader-text-span">T</span>
+          <span class="loader-text-span">H</span>
+          <span class="loader-text-span">E</span>
+          <span class="loader-text-span">R</span>
+        </h5>
+        <div class="cd">
+          <div class="cd__unit-group">
+            <div class="cd__unit">
+              <div class="cd__digits">
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
                 </div>
-                <div class="cd__unit-label">Day(s)</div>
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
+                </div>
               </div>
+              <div class="cd__unit-label">Day(s)</div>
             </div>
-            <div class="cd__unit-group">
-              <div class="cd__unit">
-                <div class="cd__digits">
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
+          </div>
+          <div class="cd__unit-group">
+            <div class="cd__unit">
+              <div class="cd__digits">
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
                 </div>
-                <div class="cd__unit-label">Hour(s)</div>
-              </div>
-              <div class="cd__unit">
-                <div class="cd__digits">
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
                 </div>
-                <div class="cd__unit-label">Minute(s)</div>
               </div>
-              <div class="cd__unit">
-                <div class="cd__digits">
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
-                  <div class="cd__digit" data-col>
-                    <div data-pos="next">-</div>
-                    <div data-pos="prev">-</div>
-                  </div>
+              <div class="cd__unit-label">Hour(s)</div>
+            </div>
+            <div class="cd__unit">
+              <div class="cd__digits">
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
                 </div>
-                <div class="cd__unit-label">Second(s)</div>
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
+                </div>
               </div>
+              <div class="cd__unit-label">Minute(s)</div>
+            </div>
+            <div class="cd__unit">
+              <div class="cd__digits">
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
+                </div>
+                <div class="cd__digit" data-col>
+                  <div data-pos="next">-</div>
+                  <div data-pos="prev">-</div>
+                </div>
+              </div>
+              <div class="cd__unit-label">Second(s)</div>
             </div>
           </div>
         </div>
       </div>
-      <canvas class="background"></canvas>
-    </section>
-    <main id="main">
-      <!--==========================
+    </div>
+    <canvas class="background"></canvas>
+  </section>
+  <main id="main">
+    <!--==========================
       About Section
     ============================-->
-      <section id="about">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h2>About Chrysalis</h2>
-              <p>The word 'Chrysalis' refers to a transitional state of a caterpillar before it turns into a beautiful butterfly. When we look at Chrysalis 2023, it embarks the beginning for some of us and the transition to a mature beautiful person for others. Being a part of our wonderful M.C.A department for these enchanting years, now is the time for us students to give a heartfelt gratitude to our department.</p>
-              <p>This time, 'Chrysalis 2023' is not just an event, but an ultimate platform for you to show your talent and prove your mettle. We will host a 4-day event starting from 5th January to 8th January. All events are being managed by students of M.C.A department.</p>
-              <style>
-                .button {
-                  border-radius: 4px;
-                  background-color: #ffffff;
-                  border: none;
-                  color: #FFFFFF;
-                  text-align: center;
-                  font-size: 28px;
-                  padding: 20px;
-                  width: 200px;
-                  transition: all 0.5s;
-                  cursor: pointer;
-                  margin: 5px;
-                }
-                
-                .button span {
-                  cursor: pointer;
-                  display: inline-block;
-                  position: relative;
-                  transition: 0.5s;
-                }
-                
-                .button span:after {
-                  content: '\00bb';
-                  position: absolute;
-                  opacity: 0;
-                  top: 0;
-                  right: -20px;
-                  transition: 0.5s;
-                }
-                
-                .button:hover span {
-                  padding-right: 25px;
-                }
-                
-                .button:hover span:after {
-                  opacity: 1;
-                  right: 0;
-                }
-                </style>
-                </head>
-                <body>
-                 <a href ="https://rcoem.in/anon_evForm.htm?ev=138" ><button class="button"><span> Registration </span></a></button>
-            </div>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>About Chrysalis</h2>
+            <p>The word 'Chrysalis' refers to a transitional state of a caterpillar before it turns into a beautiful
+              butterfly. When we look at Chrysalis 2023, it embarks the beginning for some of us and the transition to a
+              mature beautiful person for others. Being a part of our wonderful M.C.A department for these enchanting
+              years, now is the time for us students to give a heartfelt gratitude to our department.</p>
+            <p>This time, 'Chrysalis 2023' is not just an event, but an ultimate platform for you to show your talent
+              and prove your mettle. We will host a 4-day event starting from 5th January to 8th January. All events are
+              being managed by students of M.C.A department.</p>
+            <style>
+              .button {
+                border-radius: 4px;
+                background-color: #ffffff;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 28px;
+                padding: 20px;
+                width: 200px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+              }
+
+              .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+              }
+
+              .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+              }
+
+              .button:hover span {
+                padding-right: 25px;
+              }
+
+              .button:hover span:after {
+                opacity: 1;
+                right: 0;
+              }
+            </style>
+            </head>
+
+            <body>
+              <a href="https://rcoem.in/anon_evForm.htm?ev=138"><button class="button"><span> Registration
+                  </span></a></button>
           </div>
         </div>
-      </section>
-      <!--==========================
+      </div>
+    </section>
+    <!--==========================
       Speakers Section
     ============================-->
-      <!-- <section id="speakers" class="wow fadeInUp"><div class="container"><div class="section-header"><h2>Event Speakers</h2><p>Here are some of our speakers</p></div><div class="row"><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Brenden Legros</a></h3><p>Quas alias incidunt</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/2.jpg" alt="Speaker 2" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Hubert Hirthe</a></h3><p>Consequuntur odio aut</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/3.jpg" alt="Speaker 3" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Cole Emmerich</a></h3><p>Fugiat laborum et</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/4.jpg" alt="Speaker 4" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Jack Christiansen</a></h3><p>Debitis iure vero</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/5.jpg" alt="Speaker 5" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Alejandrin Littel</a></h3><p>Qui molestiae natus</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/6.jpg" alt="Speaker 6" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Willow Trantow</a></h3><p>Non autem dicta</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div></div></div></section> -->
-      <!--==========================
+    <!-- <section id="speakers" class="wow fadeInUp"><div class="container"><div class="section-header"><h2>Event Speakers</h2><p>Here are some of our speakers</p></div><div class="row"><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Brenden Legros</a></h3><p>Quas alias incidunt</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/2.jpg" alt="Speaker 2" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Hubert Hirthe</a></h3><p>Consequuntur odio aut</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/3.jpg" alt="Speaker 3" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Cole Emmerich</a></h3><p>Fugiat laborum et</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/4.jpg" alt="Speaker 4" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Jack Christiansen</a></h3><p>Debitis iure vero</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/5.jpg" alt="Speaker 5" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Alejandrin Littel</a></h3><p>Qui molestiae natus</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div><div class="col-lg-4 col-md-6"><div class="speaker"><img loading="lazy" src="img/speakers/6.jpg" alt="Speaker 6" class="img-fluid"><div class="details"><h3><a href="speaker-details.html">Willow Trantow</a></h3><p>Non autem dicta</p><div class="social"><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-google-plus"></i></a><a href=""><i class="fa fa-linkedin"></i></a></div></div></div></div></div></div></section> -->
+    <!--==========================
       Schedule Section
     ============================-->
-      <section id="schedule" class="section-with-bg">
-        <div class="container wow fadeInUp">
-          <div class="section-header">
-            <h2>Event Schedule</h2>
-            <p>Tentative Schedule for Chrysalis'23</p>
-          </div>
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" href="javascript:;" onclick="Day1Text();" role="tab" data-toggle="tab">Day 1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:;" onclick="Day2Text();" role="tab" data-toggle="tab">Day 2</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:;" onclick="Day3Text();" role="tab" data-toggle="tab">Day 3</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:;" onclick="Day4Text();" role="tab" data-toggle="tab">Day 4</a>
-            </li>
-          </ul>
-          <h3 id="header_title" class="sub-heading">Technical Day</h3>
-          <script>
-            function Day1Text() {
-              document.getElementById("header_title").textContent = "Technical day";
-            }
-
-            function Day2Text() {
-              document.getElementById("header_title").textContent = "Sports Day";
-            }
-
-            function Day3Text() {
-              document.getElementById("header_title").textContent = "Treauer Hunt & Sports Day";
-            }
-            function Day4Text() {
-              document.getElementById("header_title").textContent = "Inaugural Day & Cultural Day";
-            }
-          </script>
-          <div class="tab-content row justify-content-center">
-           
-            <!-- Schdule Day 1 -->
-            <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>10 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <h4>Registration</h4>
-                  <p>3 Player team will be formed for Technical Day Round, More Information will be available Soon.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>11:00 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">                 
-                  </div>
-                  <h4> Coding & Apptitude Round<span></span>
-                  </h4>
-                  <p> Out of the 3 Players, 2 Players will take part in Coding & Apptitude Round.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>12:00 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker"> 
-                  </div>
-                  <h4>Gaming (CALL OF DUTY MOBILE)<span></span>
-                  </h4>
-                  <p> One of Player of 3 Player Team will take part in Mobile Gaming Round. </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Schdule Day 1 -->
-            
-            <!-- Schdule Day 2 -->
-            <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>7:30 AM - 8:30</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                  </div>
-                  <h4> Football Matches<span></span>
-                  </h4>
-                  <p></p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>8:50 - 9:30 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                  </div>
-                  <h4>Football Final<span></span>
-                  </h4>
-                  <p></p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>12:00 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img loading="lazy" src="img/speakers/3.jpg" alt="Cole Emmerich">
-                  </div>
-                  <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span>
-                  </h4>
-                  <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>02:00 PM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img loading="lazy" src="img/speakers/4.jpg" alt="Jack Christiansen">
-                  </div>
-                  <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span>
-                  </h4>
-                  <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>03:00 PM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img loading="lazy" src="img/speakers/5.jpg" alt="Alejandrin Littel">
-                  </div>
-                  <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span>
-                  </h4>
-                  <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>04:00 PM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img loading="lazy" src="img/speakers/6.jpg" alt="Willow Trantow">
-                  </div>
-                  <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span>
-                  </h4>
-                  <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-                </div>
-              </div>
-            </div>
-            <!-- End Schdule Day 2 -->
-            <!-- Schdule Day 3 -->
-            <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>10:00 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                  </div>
-                  <h4>UPDATEEE<span></span>
-                  </h4>
-                  <p>Is yet to announce.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>11:00 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                  </div>
-                  <h4>program<span></span>
-                  </h4>
-                  <p>Is yet to announce.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>12:00 AM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                  </div>
-                  <h4>program<span></span>
-                  </h4>
-                  <p>Is yet to announce.</p>
-                </div>
-              </div>
-          <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>02:00 PM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img loading="lazy" src="img/speakers/4.jpg" alt="Jack Christiansen">
-                  </div>
-                  <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span>
-                  </h4>
-                  <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>03:00 PM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img loading="lazy" src="img/speakers/5.jpg" alt="Alejandrin Littel">
-                  </div>
-                  <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span>
-                  </h4>
-                  <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-                </div>
-              </div>
-              <div class="row schedule-item">
-                <div class="col-md-2">
-                  <time>04:00 PM</time>
-                </div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img loading="lazy" src="img/speakers/6.jpg" alt="Willow Trantow">
-                  </div>
-                  <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span>
-                  </h4>
-                  <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-                </div>
-              </div>
-            </div>
-           
-            </div>
+    <section id="schedule" class="section-with-bg">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Event Schedule</h2>
+          <p>Tentative Schedule for Chrysalis'23</p>
         </div>
-      </section>
-      <!--==========================
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link event-schedule active" href="javascript:;" role="tab" data-toggle="day-1">Day 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  event-schedule " href="javascript:;" role="tab" data-toggle="day-2">Day 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  event-schedule " href="javascript:;" role="tab" data-toggle="day-3">Day 3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  event-schedule " href="javascript:;" role="tab" data-toggle="day-4">Day 4</a>
+          </li>
+        </ul>
+        <h3 id="header_title" class="sub-heading">Technical Day</h3>
+        <div class="tab-content row justify-content-center">
+          <!-- Schdule Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1" data-heading="Technical Day">
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>10 AM</time>
+              </div>
+              <div class="col-md-10">
+                <h4>Registration</h4>
+                <p>3 Player team will be formed for Technical Day Round, More Information will be available Soon.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>11:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4> Coding & Apptitude Round<span></span>
+                </h4>
+                <p> Out of the 3 Players, 2 Players will take part in Coding & Apptitude Round.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>12:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>Gaming (CALL OF DUTY MOBILE)<span></span>
+                </h4>
+                <p> One of Player of 3 Player Team will take part in Mobile Gaming Round. </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Schdule Day 1 -->
+
+          <!-- Schdule Day 2 -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2" data-heading="Sports Day">
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>7:30 AM - 8:30</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4> Football Matches<span></span>
+                </h4>
+                <p></p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>8:50 - 9:30 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>Football Final<span></span>
+                </h4>
+                <p></p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>12:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/3.jpg" alt="Cole Emmerich">
+                </div>
+                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span>
+                </h4>
+                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>02:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/4.jpg" alt="Jack Christiansen">
+                </div>
+                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span>
+                </h4>
+                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>03:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                </div>
+                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span>
+                </h4>
+                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>04:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/6.jpg" alt="Willow Trantow">
+                </div>
+                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span>
+                </h4>
+                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Schdule Day 2 -->
+          <!-- Schdule Day 3 -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3" data-heading="Treasure Hunt & Sports Day">
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>10:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>UPDATEEE<span></span>
+                </h4>
+                <p>Is yet to announce.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>11:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>program<span></span>
+                </h4>
+                <p>Is yet to announce.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>12:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>program<span></span>
+                </h4>
+                <p>Is yet to announce.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>02:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/4.jpg" alt="Jack Christiansen">
+                </div>
+                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span>
+                </h4>
+                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>03:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                </div>
+                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span>
+                </h4>
+                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>04:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/6.jpg" alt="Willow Trantow">
+                </div>
+                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span>
+                </h4>
+                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-4" data-heading="Inaugural Day & Cultural Day">
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>10:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>UPDATEEE<span></span>
+                </h4>
+                <p>Is yet to announce.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>11:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>program<span></span>
+                </h4>
+                <p>Is yet to announce.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>12:00 AM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                </div>
+                <h4>program<span></span>
+                </h4>
+                <p>Is yet to announce.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>02:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/4.jpg" alt="Jack Christiansen">
+                </div>
+                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span>
+                </h4>
+                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>03:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                </div>
+                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span>
+                </h4>
+                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>04:00 PM</time>
+              </div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img loading="lazy" src="img/speakers/6.jpg" alt="Willow Trantow">
+                </div>
+                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span>
+                </h4>
+                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--==========================
       Venue Section
     ============================-->
-      <section id="venue" class="wow fadeInUp">
-        <div class="container-fluid">
-          <div class="section-header">
-            <h2>Event Venue</h2>
-            <p>Event venue location info and gallery</p>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-lg-6 venue-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.3908648934616!2d79.05943361437095!3d21.176626388091012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1a8970c08e9%3A0xfe4a9c97e7e671cb!2sShri%20Ramdeobaba%20College%20of%20Engineering%20and%20Management!5e0!3m2!1sen!2sin!4v1672079471364!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
-            </div>
-            <div class="col-lg-6 venue-info">
-              <div class="row justify-content-center">
-                <div class="col-11 col-lg-8">
-                  <h3>Shri Ramdeobaba College Of Engineering And Management, Nagpur</h3>
-                  <p>This time, 'Chrysalis 2023' is not just an event, but an ultimate platform for you to show your talent and prove your mettle. We will host a 4-day event starting from 5th January to 8th January. All events are being managed by students of M.C.A department.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section id="venue" class="wow fadeInUp">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h2>Event Venue</h2>
+          <p>Event venue location info and gallery</p>
         </div>
-        <div class="container-fluid venue-gallery-container">
-          <div class="row no-gutters">
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="img/prev-gallery/one.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/one.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="img/prev-gallery/five.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/five.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="img/prev-gallery/two.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/two.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="img/prev-gallery/two.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/six.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="img/prev-gallery/three.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/three.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="img/prev-gallery/seven.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/seven.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="img/prev-gallery/four.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/four.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="img/prev-gallery/eight.jpg" class="venobox" data-gall="venue-gallery">
-                  <img loading="lazy" src="img/prev-gallery/eight.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery"></div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery"></div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery"></div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery"></div>
-            </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 venue-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.3908648934616!2d79.05943361437095!3d21.176626388091012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1a8970c08e9%3A0xfe4a9c97e7e671cb!2sShri%20Ramdeobaba%20College%20of%20Engineering%20and%20Management!5e0!3m2!1sen!2sin!4v1672079471364!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
           </div>
-        </div>
-      </section>
-      <!-- QUOTES SECTION -->
-      <link rel="stylesheet" href="css/testimonial.css">
-      <section class="ftco-section testimony-section">
-        <div class="container">
-          <div class="row justify-content-center pb-2">
-            <div class="col-md-8 text-center heading-section ftco-animate fadeInUp ftco-animated">
-              <div class="section-header">
-                <h2 class="mb-4">Thoughts</h2>
-                <!-- <p>Let's see what our members think about Chrysalis</p> -->
-              </div>
-            </div>
-          </div>
-          <section class="testimonial text-center">
-            <div class="testimonial-owl-carousel owl-stage-outer owl-carousel owl-theme slider">
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ Chrysalis2022 was full of enthusiasm, exploration, and challenges. I had worked with seniors in technical day, which help me to gained more knowledge in the team work. I had also intensified my time management skills, when I had to perform in various dance. Really, it was a great experience!!😉 ”</blockquote>
-                  <p class="author">Mrinal Choudhary <span>President</span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/MrinalChoudhary_Sem3_President.png" alt="Author Image">
-                </div>
-              </div>
-
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ Last year was a year where we felt things which were quite alien to all of us. As we were freshers there wasn't a deep bond between us, though as last year's chrysalis reached its end we developed bonds which will last forever. And this is what Chrysalis is all about, Creating unbreakable bonds. ”</blockquote>
-                  <p class="author">Rohit Singh <span>Vice President</span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Rohit_singh_Sem3_VicePresident.jpg" alt="Author Image">
-                </div>
-              </div>
-
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ Great opportunity to learn and develop your skills while having a fun time with friends. ” </blockquote>
-                  <p class="author">Rishab Sharma <span>Inaugural head </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Rishab_Sharma_Sem3_InauguralHead.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ It is the best Experience of college life ,i.e Attending & organizing the Chrysalis .After Organizing the Sports Day I have realised that “It always seems Easy to Plan until we Experience the Process ”</blockquote>
-                  <p class="author">Prateek Pathak <span>Sports Head </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/PrateekPathak_Sem3_Sportshead.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ A beautiful rhythm of team and hard work ”</blockquote>
-                  <p class="author">Tanmay Warokar <span>Co - executive </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Tanmay_Warokar_sem 1_Co-executive.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ Embrace the spirit of college life and let the excitement take over! ”</blockquote>
-                  <p class="author">Sajeed Kannoje <span>III Cell Co-ordinator </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Sajeed_Kannoje_IIICC.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“Previously Being part of council in graduation college, I'm very much excited in being part of SRC and taking part in chrysalis and also working towards making it a great success under guidance of teachers and heads of event. #TeamTechno ”</blockquote>
-                  <p class="author">Veena Kukreja <span>LR </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/VeenaKukreja_Sem1_LR.jpg" alt="Author Image">
-                </div>
-              </div>
-
-             
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ To achieve great things two things are needed: a plan and not quite enough time ” </blockquote>
-                  <p class="author">Ashutosh Jha <span>MCA-CORDINATOR </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Ashutosh_Jha_Sem3_MCA_Co-ordinator.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“Working at the core in last year's chrysalis which was organized in such a short while, made me more excited of all the possibilities if the event gets time to breathe, under guidance of Honorable HOD ma'am and Ex-technical head - Prabir Biswas, I took charge of Technical head for chrysalis23. Putting together the team of best of the best techno's, we are really to make this technical day great and chrysalis even more amazing! We are ready, are you? ”</blockquote>
-                  <p class="author">Izhan Khan <span>Technical head </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Izhan.jpeg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“The event was really fun, looking forward for more such opportunities while being a part of RCOEM :-) ” </blockquote>
-                  <p class="author">Anushka Tiwari <span>Cdpc team </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Anushka_Tiwari_Sem3_TeamCDPC.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ Due to covid we missed college events alot in graduation and after a long break , we had CHRYSALIS. We enjoyed way too much. We performed in cultural night(Dhoom dhadaka Orchestra), participated in sports (treasure hunt was the best). And the best part was bonding with batchmates, seniors and super seniors. NOTHING CAN BEAT COLLEGE EVENTS! ”</blockquote>
-                  <p class="author">Anjali Sharma <span>CDPC co-ordinator </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Anjali_Sharma_sem3_TnpCoordinator.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ Chrysalis is something where a person can enjoy and learn ,it helps a student to find his or her hidden skills like dancing, singing, working in team, acting, technical and so on. It's one time show but give memories that lasts forever. ”</blockquote>
-                  <p class="author">Sakshi Hemant Bidkar <span>SRC MEMBER </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Sakshi_Bidkar_Sem1_SRCMember_jpg_page-0001.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“Chrysalis is the word that makes the MCA students excited and lets them start the countdown because it's the end part where the transition process ends, i.e. Student-> Classmate -> Junior -> Senior -> Friend-> Family. For me, the last chrysalis was the unforgettable best memory. And this year I want to make it unforgettable for my juniors ”</blockquote>
-                  <p class="author">Karan Thanvi <span>Member </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Karan Thanvi Sem3.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“Fun is also important with academics. ”</blockquote>
-                  <p class="author">Manas Sharma <span>Co-Executive </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Manas_Sharma_Sem1_Co-executive.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ For all of us, Chrysalis 2022 had been a magnificent experience. There were lots of learning opportunities for us. Together with our seniors, we relished every second. They did provide us plenty room to work together. From the treasure hunt to our cultural night, we enjoyed every event. We are grateful to our faculty members for providing us with that chance. Awaiting a fantastic Chrysalis 2023! ”</blockquote>
-                  <p class="author">Aasakti Vinay Bhongade <span>Vice President (Girls) </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/AasaktiVinayBhongade_Sem3_VicePresident.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“Believe you can and you're halfway there. ”</blockquote>
-                  <p class="author">Vaishnavi Kotpalliwar <span>Back Drop Head </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Vaishnavi_Kotpalliwar_Sem3_BackDrop_Head.png" alt="Author Image">
-                </div>
-              </div>
-
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ There is no elevator to success. You have to take the stairs. ”</blockquote>
-                  <p class="author">Srushti Hemnani <span> Co Executive</span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Srushti_hemnani_sem1_co-executive.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ It's not about perfect. It's about effort. ”</blockquote>
-                  <p class="author">Ayush Pal <span> Class Representative </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/ayush.jpg" alt="Author Image">
-                </div>
-              </div>
-              <div class="slide item" style="display: flex;">
-                <div class="testimonial-quote">
-                  <blockquote>“ Iet's Create Memories Together ”</blockquote>
-                  <p class="author">Shivam Asati <span> CDPC Co-ordinator </span>
-                  </p>
-                </div>
-                <div class="slider-img">
-                  <img loading="lazy" src="./img/src/Shivam_CDPC.jpg" alt="Author Image">
-                </div>
-              </div>
-            </div>
-          </section>
-    </main>
-    <!--==========================
-    Footer
-
-    
-  ============================-->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-info">
-              <img loading="lazy" src="img/logo.png" alt="Chrysalis2023">
-              <p>This time, 'Chrysalis 2023' is not just an event, but an ultimate platform for you to show your talent and prove your mettle. We will host a 4-day event starting from 5th January to 8th January. All events are being managed by students of M.C.A department.</p>
-            </div>
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#intro">Home</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#about">About us</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="#schedule">Event Schedule</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="./gallery.html">Gallery</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p> Department of Computer Application, Shri Ramdeobaba College of Engineering & Management, katol Road, Gittikhadan, Nagpur <br>
-                <!-- <strong>Phone:</strong> +1 5589 55488 55<br><strong>Email:</strong> info@example.com<br>-->
-              </p>
-              <div class="social-links">
-                <a href="https://instagram.com/chrysalis23__?igshid=YmMyMTA2M2Y=" class="instagram">
-                  <i class="fa fa-instagram"></i>
-                </a>
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>Shri Ramdeobaba College Of Engineering And Management, Nagpur</h3>
+                <p>This time, 'Chrysalis 2023' is not just an event, but an ultimate platform for you to show your
+                  talent and prove your mettle. We will host a 4-day event starting from 5th January to 8th January. All
+                  events are being managed by students of M.C.A department.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="container-fluid venue-gallery-container">
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="img/prev-gallery/one.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/one.jpg" alt="" class="img-fluid">
+              </a>
+              <a href="img/prev-gallery/five.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/five.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="img/prev-gallery/two.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/two.jpg" alt="" class="img-fluid">
+              </a>
+              <a href="img/prev-gallery/two.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/six.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="img/prev-gallery/three.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/three.jpg" alt="" class="img-fluid">
+              </a>
+              <a href="img/prev-gallery/seven.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/seven.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="img/prev-gallery/four.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/four.jpg" alt="" class="img-fluid">
+              </a>
+              <a href="img/prev-gallery/eight.jpg" class="venobox" data-gall="venue-gallery">
+                <img loading="lazy" src="img/prev-gallery/eight.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery"></div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery"></div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery"></div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- QUOTES SECTION -->
+    <link rel="stylesheet" href="css/testimonial.css">
+    <section class="ftco-section testimony-section">
       <div class="container">
-        <div class="copyright"> &copy; Copyright <strong>Chrysalis2023</strong>. All Rights Reserved </div>
-        <div class="credits"> Designed & Developed by <a href="technical-team.html"> Technical Team, SRC</a>
+        <div class="row justify-content-center pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate fadeInUp ftco-animated">
+            <div class="section-header">
+              <h2 class="mb-4">Thoughts</h2>
+              <!-- <p>Let's see what our members think about Chrysalis</p> -->
+            </div>
+          </div>
+        </div>
+        <section class="testimonial text-center">
+          <div class="testimonial-owl-carousel owl-stage-outer owl-carousel owl-theme slider">
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ Chrysalis2022 was full of enthusiasm, exploration, and challenges. I had worked with
+                  seniors in technical day, which help me to gained more knowledge in the team work. I had also
+                  intensified my time management skills, when I had to perform in various dance. Really, it was a great
+                  experience!!😉 ”</blockquote>
+                <p class="author">Mrinal Choudhary <span>President</span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/MrinalChoudhary_Sem3_President.png" alt="Author Image">
+              </div>
+            </div>
+
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ Last year was a year where we felt things which were quite alien to all of us. As we were
+                  freshers there wasn't a deep bond between us, though as last year's chrysalis reached its end we
+                  developed bonds which will last forever. And this is what Chrysalis is all about, Creating
+                  unbreakable bonds. ”</blockquote>
+                <p class="author">Rohit Singh <span>Vice President</span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Rohit_singh_Sem3_VicePresident.jpg" alt="Author Image">
+              </div>
+            </div>
+
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ Great opportunity to learn and develop your skills while having a fun time with friends. ”
+                </blockquote>
+                <p class="author">Rishab Sharma <span>Inaugural head </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Rishab_Sharma_Sem3_InauguralHead.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ It is the best Experience of college life ,i.e Attending & organizing the Chrysalis .After
+                  Organizing the Sports Day I have realised that “It always seems Easy to Plan until we Experience the
+                  Process ”</blockquote>
+                <p class="author">Prateek Pathak <span>Sports Head </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/PrateekPathak_Sem3_Sportshead.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ A beautiful rhythm of team and hard work ”</blockquote>
+                <p class="author">Tanmay Warokar <span>Co - executive </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Tanmay_Warokar_sem 1_Co-executive.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ Embrace the spirit of college life and let the excitement take over! ”</blockquote>
+                <p class="author">Sajeed Kannoje <span>III Cell Co-ordinator </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Sajeed_Kannoje_IIICC.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“Previously Being part of council in graduation college, I'm very much excited in being part
+                  of SRC and taking part in chrysalis and also working towards making it a great success under guidance
+                  of teachers and heads of event. #TeamTechno ”</blockquote>
+                <p class="author">Veena Kukreja <span>LR </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/VeenaKukreja_Sem1_LR.jpg" alt="Author Image">
+              </div>
+            </div>
+
+
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ To achieve great things two things are needed: a plan and not quite enough time ”
+                </blockquote>
+                <p class="author">Ashutosh Jha <span>MCA-CORDINATOR </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Ashutosh_Jha_Sem3_MCA_Co-ordinator.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“Working at the core in last year's chrysalis which was organized in such a short while,
+                  made me more excited of all the possibilities if the event gets time to breathe, under guidance of
+                  Honorable HOD ma'am and Ex-technical head - Prabir Biswas, I took charge of Technical head for
+                  chrysalis23. Putting together the team of best of the best techno's, we are really to make this
+                  technical day great and chrysalis even more amazing! We are ready, are you? ”</blockquote>
+                <p class="author">Izhan Khan <span>Technical head </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Izhan.jpeg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“The event was really fun, looking forward for more such opportunities while being a part of
+                  RCOEM :-) ” </blockquote>
+                <p class="author">Anushka Tiwari <span>Cdpc team </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Anushka_Tiwari_Sem3_TeamCDPC.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ Due to covid we missed college events alot in graduation and after a long break , we had
+                  CHRYSALIS. We enjoyed way too much. We performed in cultural night(Dhoom dhadaka Orchestra),
+                  participated in sports (treasure hunt was the best). And the best part was bonding with batchmates,
+                  seniors and super seniors. NOTHING CAN BEAT COLLEGE EVENTS! ”</blockquote>
+                <p class="author">Anjali Sharma <span>CDPC co-ordinator </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Anjali_Sharma_sem3_TnpCoordinator.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ Chrysalis is something where a person can enjoy and learn ,it helps a student to find his
+                  or her hidden skills like dancing, singing, working in team, acting, technical and so on. It's one
+                  time show but give memories that lasts forever. ”</blockquote>
+                <p class="author">Sakshi Hemant Bidkar <span>SRC MEMBER </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Sakshi_Bidkar_Sem1_SRCMember_jpg_page-0001.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“Chrysalis is the word that makes the MCA students excited and lets them start the countdown
+                  because it's the end part where the transition process ends, i.e. Student-> Classmate -> Junior ->
+                  Senior -> Friend-> Family. For me, the last chrysalis was the unforgettable best memory. And this year
+                  I want to make it unforgettable for my juniors ”</blockquote>
+                <p class="author">Karan Thanvi <span>Member </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Karan Thanvi Sem3.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“Fun is also important with academics. ”</blockquote>
+                <p class="author">Manas Sharma <span>Co-Executive </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Manas_Sharma_Sem1_Co-executive.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ For all of us, Chrysalis 2022 had been a magnificent experience. There were lots of
+                  learning opportunities for us. Together with our seniors, we relished every second. They did provide
+                  us plenty room to work together. From the treasure hunt to our cultural night, we enjoyed every event.
+                  We are grateful to our faculty members for providing us with that chance. Awaiting a fantastic
+                  Chrysalis 2023! ”</blockquote>
+                <p class="author">Aasakti Vinay Bhongade <span>Vice President (Girls) </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/AasaktiVinayBhongade_Sem3_VicePresident.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“Believe you can and you're halfway there. ”</blockquote>
+                <p class="author">Vaishnavi Kotpalliwar <span>Back Drop Head </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Vaishnavi_Kotpalliwar_Sem3_BackDrop_Head.png" alt="Author Image">
+              </div>
+            </div>
+
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ There is no elevator to success. You have to take the stairs. ”</blockquote>
+                <p class="author">Srushti Hemnani <span> Co Executive</span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Srushti_hemnani_sem1_co-executive.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ It's not about perfect. It's about effort. ”</blockquote>
+                <p class="author">Ayush Pal <span> Class Representative </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/ayush.jpg" alt="Author Image">
+              </div>
+            </div>
+            <div class="slide item" style="display: flex;">
+              <div class="testimonial-quote">
+                <blockquote>“ Iet's Create Memories Together ”</blockquote>
+                <p class="author">Shivam Asati <span> CDPC Co-ordinator </span>
+                </p>
+              </div>
+              <div class="slider-img">
+                <img loading="lazy" src="./img/src/Shivam_CDPC.jpg" alt="Author Image">
+              </div>
+            </div>
+          </div>
+        </section>
+  </main>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img loading="lazy" src="img/logo.png" alt="Chrysalis2023">
+            <p>This time, 'Chrysalis 2023' is not just an event, but an ultimate platform for you to show your talent
+              and prove your mettle. We will host a 4-day event starting from 5th January to 8th January. All events are
+              being managed by students of M.C.A department.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="#intro">Home</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="#about">About us</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="#schedule">Event Schedule</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="./gallery.html">Gallery</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p> Department of Computer Application, Shri Ramdeobaba College of Engineering & Management, katol Road,
+              Gittikhadan, Nagpur <br>
+              <!-- <strong>Phone:</strong> +1 5589 55488 55<br><strong>Email:</strong> info@example.com<br>-->
+            </p>
+            <div class="social-links">
+              <a href="https://instagram.com/chrysalis23__?igshid=YmMyMTA2M2Y=" class="instagram">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-<<<<<<< Updated upstream
-    <!-- #footer
+    </div>
+    <div class="container">
+      <div class="copyright"> &copy; Copyright <strong>Chrysalis2023</strong>. All Rights Reserved </div>
+      <div class="credits"> Designed & Developed by <a href="technical-team.html"> Technical Team, SRC</a>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-<!-- JavaScript Libraries -->
-=======
-    <!--#footer
-
-																																																																		<!-- JavaScript Libraries -->
->>>>>>> Stashed changes
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/superfish/hoverIntent.js"></script>
-    <script src="lib/superfish/superfish.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/venobox/venobox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <!-- Contact Form JavaScript File -->
-    <script src="contactform/contactform.js"></script>
-    <script src="./js/developer.js"></script>
-    <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
-    <script src="js/banner.js"></script>
-    <script>
-      $('.testimonial-owl-carousel').owlCarousel({
-        loop: true,
-        margin: 50,
-        nav: false,
-        // lazyLoad:true,
-        autoplay: true,
-        autoplayTimeout: 1500,
-        dots: false,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 2
-          },
-          1000: {
-            items: 2
-          }
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+  <script src="./js/developer.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+  <script src="js/banner.js"></script>
+  <script>
+    $('.testimonial-owl-carousel').owlCarousel({
+      loop: true,
+      margin: 50,
+      nav: false,
+      // lazyLoad:true,
+      autoplay: true,
+      autoplayTimeout: 1500,
+      dots: false,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 2
         }
-      })
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script>
-      window.addEventListener("DOMContentLoaded",() => {
+      }
+    })
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script>
+    $('.event-schedule').click(function (e) {
+      e.preventDefault();
+      var day = $(this).data('toggle'),
+        heading = $(`#${day}`).data('heading');
+      $('.event-schedule').removeClass('active'),
+        $(this).addClass('active'),
+        $('.event-schedule-content').removeClass('active'),
+        $('.tab-pane').removeClass('active show'),
+        $(`#${day}`).addClass('active show'),
+        $('#header_title').text(heading);
+    });
+
+
+    window.addEventListener("DOMContentLoaded", () => {
       const uec = new UnixEpochalypseCountdown(".cd");
       const infoBtn = document.getElementById("info-btn");
-    
-      if (infoBtn) infoBtn.addEventListener("click",jumpToHelp);
-     });
-  
-  function jumpToHelp() {
-    const info = document.getElementById("info");
-  
-    if (info) {
-      window.scrollTo({
-        top: info.offsetTop,
-        left: 0,
-        behavior: "smooth"
-      });
-    }
-  }
-  
-  class UnixEpochalypseCountdown {
-    constructor(qs) {
-      this.el = document.querySelector(qs);
-      this.time = [];
-      this.animTimeout = null;
-      this.updateTimeout = null;
-      this.update();
-    }
-    getProgressInSeconds() {
-      if (typeof moment === "function") {
-        const now = moment();
-        const ms = Math.ceil(now.valueOf() / 1e3);
-        return ms >> 0;
-      } else {
-        return 0;
+
+      if (infoBtn) infoBtn.addEventListener("click", jumpToHelp);
+    });
+
+    function jumpToHelp() {
+      const info = document.getElementById("info");
+
+      if (info) {
+        window.scrollTo({
+          top: info.offsetTop,
+          left: 0,
+          behavior: "smooth"
+        });
       }
     }
-    getTimeLeft() {
-      let timeLeft = {
-        d: 0,
-        h: 0,
-        m: 0,
-        s: 0
-      };
-  
-      if (typeof moment === "function") {
-        const later = moment("2023-02-09 10:00 am");
-        const now = moment();
-        const diff = moment.duration(later.diff(now));
-  
-        if (diff.valueOf() >= 0) {
-          timeLeft.d += diff.days();
-          timeLeft.h += diff.hours();
-          timeLeft.m += diff.minutes();
-          timeLeft.s += diff.seconds();
-        }else{
-          $('.cd').remove()
+
+    class UnixEpochalypseCountdown {
+      constructor(qs) {
+        this.el = document.querySelector(qs);
+        this.time = [];
+        this.animTimeout = null;
+        this.updateTimeout = null;
+        this.update();
+      }
+      getProgressInSeconds() {
+        if (typeof moment === "function") {
+          const now = moment();
+          const ms = Math.ceil(now.valueOf() / 1e3);
+          return ms >> 0;
+        } else {
+          return 0;
         }
       }
-  
-      return timeLeft;
-    }
-    clearAnimations() {
-      if (this.el) {
-        const colAnimsToClear = this.el.querySelectorAll("[data-col]");
-  
-        Array.from(colAnimsToClear).forEach(a => {
-          a.classList.remove("cd__digit--roll-in");
-        });
-  
-        const posAnimsToClear = this.el.querySelectorAll("[data-pos]");
-  
-        Array.from(posAnimsToClear).forEach(a => {
-          a.classList.remove("cd__next-digit-fade","cd__prev-digit-fade");
-        });
-      }
-    }
-    update(doAnimations = false) {
-      // start with all dashes
-      if (!this.time.length) {
-        let digitCount = 12;
-  
-        while (digitCount--)
-          this.time.push("-");
-      }
-      // update data
-      const display = this.getTimeLeft();
-      const displayDigits = [];
-  
-      for (let v in display) {
-        const digits = `${display[v]}`.split("");
-        // add zero to single digits
-        if (digits.length < 2)
-          digits.unshift("0");
-  
-        displayDigits.push(...digits);
-      }
-      // update display
-      const cols = this.el.querySelectorAll("[data-col]");
-  
-      if (cols) {
-        Array.from(cols).forEach((c,i) => {
-          const digit = displayDigits[i];
-  
-          if (digit !== this.time[i]) {
-            const next = c.querySelector(`[data-pos="next"]`);
-            const prev = c.querySelector(`[data-pos="prev"]`);
-  
-            if (doAnimations === true) {
-              c.classList.add("cd__digit--roll-in");
-              next.classList.add("cd__next-digit-fade");
-              prev.classList.add("cd__prev-digit-fade");
-            }
-  
-            next.innerHTML = digit;
-            prev.innerHTML = this.time[i];
+      getTimeLeft() {
+        let timeLeft = {
+          d: 0,
+          h: 0,
+          m: 0,
+          s: 0
+        };
+
+        if (typeof moment === "function") {
+          const later = moment("2023-02-09 10:00 am");
+          const now = moment();
+          const diff = moment.duration(later.diff(now));
+
+          if (diff.valueOf() >= 0) {
+            timeLeft.d += diff.days();
+            timeLeft.h += diff.hours();
+            timeLeft.m += diff.minutes();
+            timeLeft.s += diff.seconds();
+          } else {
+            $('.cd').remove()
           }
-        });
+        }
+
+        return timeLeft;
       }
-  
-      this.time = displayDigits;
-      // progress in seconds
-      const progress = this.el.querySelector("[data-progress]");
-  
-      if (progress)
-        progress.innerHTML = this.getProgressInSeconds();
-      // loop
-      clearTimeout(this.animTimeout);
-      this.animTimeout = setTimeout(this.clearAnimations.bind(this),500);
-  
-      clearTimeout(this.updateTimeout);
-      this.updateTimeout = setTimeout(this.update.bind(this,true),1e3);
+      clearAnimations() {
+        if (this.el) {
+          const colAnimsToClear = this.el.querySelectorAll("[data-col]");
+
+          Array.from(colAnimsToClear).forEach(a => {
+            a.classList.remove("cd__digit--roll-in");
+          });
+
+          const posAnimsToClear = this.el.querySelectorAll("[data-pos]");
+
+          Array.from(posAnimsToClear).forEach(a => {
+            a.classList.remove("cd__next-digit-fade", "cd__prev-digit-fade");
+          });
+        }
+      }
+      update(doAnimations = false) {
+        // start with all dashes
+        if (!this.time.length) {
+          let digitCount = 12;
+
+          while (digitCount--)
+            this.time.push("-");
+        }
+        // update data
+        const display = this.getTimeLeft();
+        const displayDigits = [];
+
+        for (let v in display) {
+          const digits = `${display[v]}`.split("");
+          // add zero to single digits
+          if (digits.length < 2)
+            digits.unshift("0");
+
+          displayDigits.push(...digits);
+        }
+        // update display
+        const cols = this.el.querySelectorAll("[data-col]");
+
+        if (cols) {
+          Array.from(cols).forEach((c, i) => {
+            const digit = displayDigits[i];
+
+            if (digit !== this.time[i]) {
+              const next = c.querySelector(`[data-pos="next"]`);
+              const prev = c.querySelector(`[data-pos="prev"]`);
+
+              if (doAnimations === true) {
+                c.classList.add("cd__digit--roll-in");
+                next.classList.add("cd__next-digit-fade");
+                prev.classList.add("cd__prev-digit-fade");
+              }
+
+              next.innerHTML = digit;
+              prev.innerHTML = this.time[i];
+            }
+          });
+        }
+
+        this.time = displayDigits;
+        // progress in seconds
+        const progress = this.el.querySelector("[data-progress]");
+
+        if (progress)
+          progress.innerHTML = this.getProgressInSeconds();
+        // loop
+        clearTimeout(this.animTimeout);
+        this.animTimeout = setTimeout(this.clearAnimations.bind(this), 500);
+
+        clearTimeout(this.updateTimeout);
+        this.updateTimeout = setTimeout(this.update.bind(this, true), 1e3);
+      }
     }
-  }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
